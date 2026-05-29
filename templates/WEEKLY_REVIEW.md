@@ -1,5 +1,5 @@
 # Weekly Review
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Default: minimum weekly review
 Target duration: 5 minutes. Use this unless Sundar asks for full review or there is a serious pattern to analyze.
@@ -151,3 +151,21 @@ Review only two streaks during the v2.6 test period:
 - Night review streak
 
 If either streak becomes a shame trigger, stop displaying streak numbers in normal check-ins and keep the behavior tracked silently.
+
+
+## Life signals synthesis (v3.3)
+Synthesize the week's signals in 3–5 lines, strict but non-shaming. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+
+```text
+Sleep trend:
+Meal regularity (skips/late):
+Movement count:
+Mood/energy trend:
+Weight direction (4-week, not a single reading):
+Drift pattern:
+One honest correlation (e.g., rough sleep + skipped breakfast = low energy):
+Improvement or decline vs last week:
+One small adjustment for next week:
+```
+
+Then age the rolling window in `REBUILD_OS_BRAIN.md` Section 35: push the oldest detailed week into a weekly summary row; at month end, compress four weekly summaries into one monthly line. Keep the section bounded. No calories, no moralizing.

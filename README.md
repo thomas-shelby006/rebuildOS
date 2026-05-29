@@ -1,4 +1,4 @@
-# Rebuild OS v3.2 Deployment Ready
+# Rebuild OS v3.3 Life Signals
 
 Rebuild OS is Sundar's therapy-informed self-coaching, accountability, planning, and life-management system.
 
@@ -18,6 +18,7 @@ It helps Sundar:
 - restart gym without overcommitting
 - progress toward PM roles without making PM the whole system
 - run night and weekly reviews without punishment
+- act as a steady daily companion that tracks life signals over time — sleep, meals/food quality, weight (Mon/Wed/Fri), mood/energy/day-quality, movement, hygiene-when-relevant, work visibility, PM, and drift — stored as a bounded rolling window (detailed current week, summarized recent weeks, compressed older months) and surfaced as week-to-week patterns
 - preserve context through `BRAIN_SNAPSHOT.md`, `REBUILD_OS_BRAIN.md`, and handoff files
 - adapt over time through the preference feedback ledger and active preference profile
 
@@ -35,6 +36,10 @@ For a new Claude / ChatGPT Project, upload or keep active:
    - `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md`
 
 Then paste `FIRST_RUN_PROMPT.md`.
+
+### ChatGPT Plus (primary daily home)
+
+ChatGPT Projects is the primary daily environment. Use the curated hybrid pack in `chatgpt_live_pack/`: upload those files into the Project and paste `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md` into the Project Instructions field. Full steps are in `chatgpt_live_pack/UPLOAD_README.md`. GitHub/Kiro remains the source/archive/builder.
 
 ## Daily use commands
 
@@ -77,6 +82,8 @@ Everything else goes to System Notes and weekly review.
 - `core/21_FILE_LOADING_PRIORITY_GUIDE.md` = tells the AI what to load and ignore.
 - `REBUILD_OS_ALL_IN_ONE.md` = single-file fallback if individual file loading fails or a platform cannot handle the full folder structure.
 - `templates/` = command-specific workflows.
+- `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md` = active life-signal tracking + time-aware companion rules (v3.3); rolling history lives in `REBUILD_OS_BRAIN.md` Section 35.
+- `chatgpt_live_pack/` = generated, upload-ready ChatGPT Project set (curated files + `CORE_OPERATING_MANUAL.md` and `TEMPLATES_BUNDLE.md` bundles + `UPLOAD_README.md`). Source files remain canonical; bundles are generated artifacts.
 - `platforms/` = Claude / ChatGPT / Canvas adapters.
 - `audit/` = setup and validation only.
 - `audit/history/` = old review artifacts; do not load during daily use.

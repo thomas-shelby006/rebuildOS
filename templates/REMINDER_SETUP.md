@@ -1,5 +1,5 @@
 # Reminder Setup Template
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Input
 
@@ -27,3 +27,10 @@ Should this be added to the brain? yes/no
 - "Timesheet check: update today's time entry now."
 - "Night review: done, missed, energy debt, tomorrow's first action."
 - "Weekly review: score stability, review patterns, approve next-week targets."
+
+
+## Life signals reminder examples (v3.3)
+- "Rebuild OS weight check (M/W/F): weight today? Skip is fine." (only Mon/Wed/Fri morning; not on Red days)
+- "Rebuild OS lunch window: had lunch? (or skipped?)" (optional, opt-in, gentle, once)
+
+Reminders are nudges only; the data lives in `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 35, not in the reminder. No calories, no moralizing.

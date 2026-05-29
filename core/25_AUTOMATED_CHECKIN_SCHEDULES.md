@@ -1,5 +1,5 @@
 # Automated Check-in Schedules
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 Purpose: define how Rebuild OS should use reminders, scheduled prompts, calendar events, phone alarms, and social anchors without becoming notification noise.
 
@@ -125,3 +125,21 @@ Use social/body-doubling anchor when:
 - sleep drift keeps breaking morning function
 
 Default social anchor: send a simple update to a trusted friend or do a 25-minute virtual work block.
+
+
+## 10. Life signals check-ins (v3.3)
+Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. These are nudges only, not the data store.
+
+| Check-in | Suggested timing | Purpose | Reminder level |
+|---|---|---|---|
+| Weight check | Mon/Wed/Fri morning | One skippable weight data point | scheduled chat or phone |
+| Lunch window (optional) | ~1:00–3:00 p.m. | Gentle "had lunch?" if not logged | optional chat, opt-in |
+| Dinner window (optional) | ~8:00–10:00 p.m. | Gentle "had dinner?" if not logged | optional chat, opt-in |
+
+Rules:
+- Weight only on M/W/F; never daily; skippable; not on Red mornings.
+- Meal nudges are opt-in and gentle; one ask per window; no calories, no moralizing; never on Red days.
+- Do not add these to the default starter set. Start with Morning, Post-Scrum, Night Review, Weekly Review; add weight M/W/F if Sundar wants tracking; add meal windows only on request.
+
+### Weight Check Task (ChatGPT Tasks pattern)
+On Monday, Wednesday, and Friday morning, ask me once for my weight, accept a skip without comment, record it as a trend data point (no judgement, no target), and write it to the brain Section 35 and the snapshot Signals line.

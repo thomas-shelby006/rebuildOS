@@ -1,5 +1,5 @@
 # Roadblock Check
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 Use when the system is not working smoothly.
 
@@ -20,3 +20,7 @@ Log for weekly review? yes/no
 ```
 
 If a work/stability action is pending, do not redesign the system. Capture the issue and return to action.
+
+
+## Life signals note (v3.3)
+If life-signal tracking itself feels heavy or naggy, treat that as a roadblock: reduce to passive capture only (no meal/weight asks), keep just the snapshot `Signals:` line, and log the friction for weekly review. Tracking must never become another burden.

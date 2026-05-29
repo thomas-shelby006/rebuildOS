@@ -1,5 +1,5 @@
 # Midday Anchor Check
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Purpose
 Re-anchor the day from current reality.
@@ -34,3 +34,9 @@ If-then rule:
 Reminder/check-in needed:
 Report back:
 ```
+
+
+## Life signals (v3.3, light)
+- Around the lunch window, if lunch is not logged, ask one line: `Had lunch? (or skipped?)`. Accept "skipped, busy". No calories, no moralizing.
+- Note movement (walk/steps) only if mentioned.
+- Fold into the snapshot `Signals:` line. Ask once; do not nag. Skip on Red days.

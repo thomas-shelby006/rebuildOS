@@ -1,5 +1,5 @@
 # Night Review
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Target duration
 Default: 3–5 minutes. Full review is optional and mainly for Green days or weekly-review prep.
@@ -155,3 +155,22 @@ On Yellow/Green nights, update them automatically:
 - Increment night review because this review happened; reset only if a day was skipped.
 
 On Red nights, do not emphasize streaks. If needed, update quietly in the brain/snapshot without making it a shame signal.
+
+
+## Life signals writeback (v3.3)
+At night review, capture today's compact signals, write one row to `REBUILD_OS_BRAIN.md` Section 35 current-week table, and refresh the `BRAIN_SNAPSHOT.md` `Signals:` line. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+
+Capture only what is known — do not interrogate:
+
+```text
+Date/day:
+Day quality (word or 1-3):
+Sleep (sleep→wake / quality 1-3):
+Meals (B/L/D + rough quality; note skips/reasons):
+Movement (walk/gym/steps):
+Mood/energy (1-3) + shame flag if present:
+Weight (only if M/W/F and checked):
+Drift/avoidance:
+```
+
+Rules: no calories, no food/weight moralizing. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
