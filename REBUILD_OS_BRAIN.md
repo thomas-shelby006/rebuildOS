@@ -134,6 +134,11 @@ Rebuild OS v3.3 Life Signals adds, at Sundar's explicit request, active life-sig
 - Transition Mode needed?:
 - This week’s PM minimum:
 - What moved the stage forward:
+- PM roadmap provided?: no
+- PM roadmap source/date:
+- PM roadmap current phase:
+- PM roadmap next milestone:
+- Roadmap miss handling rule: classify as carry forward / reschedule / shrink / cancel / revise roadmap. Never fake progress or invent deliverables. PM remains one important track, not the whole OS.
 
 ## 24. Ledger Cleanup / Archive Notes
 - Active commitment count:
@@ -224,6 +229,11 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Opted-out domains: none yet
 - No calories/macros. No food/weight moralizing. Red days exempt.
 
+### Calibration and confidence
+- First 7 days status: baseline forming
+- Data confidence rule: confirmed / inferred `(inf)` / missing. Do not treat inferred or missing data as fact.
+- Trend confidence rule: no confident trend claims until enough data exists. Prefer at least 2 weeks for behavior patterns and 4 weeks for weight direction.
+
 ### Baselines
 - Typical wake / sleep window: not yet established
 - Weight baseline + last reading: ~101 kg / not yet logged
@@ -231,14 +241,14 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Usual mood/energy band: not yet established
 
 ### Current week — daily rows (most detail)
-| Date / day | Day quality (bad/rough/okay/good/strong) | Sleep (sleep→wake / qual) | Meals (B/L/D + quality) | Movement | Mood/Energy | Weight (M/W/F) | Drift | Note (incl. hygiene when relevant) |
-|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
+| Date / day | Day quality (bad/rough/okay/good/strong) | Sleep (sleep→wake / qual) | Meals (B/L/D + quality) | Movement | Mood/Energy | Weight (M/W/F) | Drift | Confidence | Note (incl. hygiene when relevant) |
+|---|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | | |
 
 ### Last 4 weeks — weekly summaries (trend, not per-day)
-| Week of | Sleep consistency | Meal regularity | Movement count | Mood/energy trend | Weight direction | Work-visibility | Drift | One pattern |
-|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | |
+| Week of | Sleep consistency | Meal regularity | Movement count | Mood/energy trend | Weight direction | Work-visibility | Drift | One pattern | Confidence |
+|---|---|---|---|---|---|---|---|---|---|
+| | | | | | | | | | |
 
 ### Older months — compressed summaries (one line each)
 - _None yet._
@@ -253,10 +263,11 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Hygiene/basic-routine notes (when relevant; e.g., low-zone days):
 - Known correlations:
 - Detected recurring patterns to watch:
+- Weekly output format: 3 wins / 3 misses / 2 patterns / 1 likely correlation / 1 next-week adjustment / 1 thing to stop tracking if not useful.
 
 ### Weight check tracking
 - Last weight check date:
 - Next weight check due: next Monday / Wednesday / Friday morning
 
 ## 36. Handoff Summary
-Rebuild OS is a therapy-informed self-coaching and life-management system. It supports one long chat plus this live brain as handoff. It tracks commitments, capacity, sleep debt, avoidance patterns, weekly targets, reminders, experiments, environment rules, work visibility, sleep anchors, technical blockers, gym restart, interview mode, system notes, and daily life signals (sleep, meals, weight, mood/energy, movement, drift) stored as a bounded rolling window. It is strict but non-shaming, a steady companion but never a therapist or romantic partner. Current priority is rebuilding day-to-day reliability while keeping PM transition as one important track.
+Rebuild OS is a therapy-informed self-coaching and life-management system. It supports one long chat plus this live brain as handoff. It tracks commitments, capacity, sleep debt, avoidance patterns, weekly targets, reminders, experiments, environment rules, work visibility, sleep anchors, technical blockers, gym restart, interview mode, system notes, PM-roadmap accountability when provided, and daily life signals (sleep, meals, weight, mood/energy, movement, drift) stored as a bounded rolling window. It is strict but non-shaming, a steady companion but never a therapist or romantic partner. Current priority is rebuilding day-to-day reliability while keeping PM transition as one important track.
