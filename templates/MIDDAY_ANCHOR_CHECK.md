@@ -37,6 +37,6 @@ Report back:
 
 
 ## Life signals (v3.3, light)
-- Around the lunch window, if lunch is not logged, ask one line: `Had lunch? (or skipped?)`. Accept "skipped, busy". No calories, no moralizing.
+- Lunch check is **active by default on Yellow/Green**: around the lunch window, if lunch is not logged and Sundar opens chat, ask one line once: `Had lunch? (or skipped?)`. Accept "skipped, busy". No calories, no moralizing. (External meal reminders remain optional.)
 - Note movement (walk/steps) only if mentioned.
 - Fold into the snapshot `Signals:` line. Ask once; do not nag. Skip on Red days.

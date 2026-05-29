@@ -29,3 +29,4 @@ If context is stale, ask only for the minimum refresh. Do not run full setup.
 - Infer mode from current time (Asia/Kolkata) and snapshot freshness; if morning startup hasn't happened, start it.
 - If it is M/W/F morning and weight is not logged, ask once (skippable). Skip on Red.
 - Capture volunteered signals into the snapshot `Signals:` line. No forms.
+- On low-zone/shutdown starts, one gentle basic-routine nudge (brush teeth / quick shower / get dressed) can be the first activation step — framed as activation, not shame. Not a daily checklist.

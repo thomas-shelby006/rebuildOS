@@ -159,6 +159,7 @@ Synthesize the week's signals in 3–5 lines, strict but non-shaming. Canonical:
 ```text
 Sleep trend:
 Meal regularity (skips/late):
+Day-quality trend (bad/rough/okay/good/strong):
 Movement count:
 Mood/energy trend:
 Weight direction (4-week, not a single reading):

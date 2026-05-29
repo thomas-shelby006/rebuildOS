@@ -133,12 +133,12 @@ Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. These are nudges only, 
 | Check-in | Suggested timing | Purpose | Reminder level |
 |---|---|---|---|
 | Weight check | Mon/Wed/Fri morning | One skippable weight data point | scheduled chat or phone |
-| Lunch window (optional) | ~1:00–3:00 p.m. | Gentle "had lunch?" if not logged | optional chat, opt-in |
-| Dinner window (optional) | ~8:00–10:00 p.m. | Gentle "had dinner?" if not logged | optional chat, opt-in |
+| Lunch window | ~1:00–3:00 p.m. | Gentle "had lunch?" if not logged | in-chat default (Y/G); external optional |
+| Dinner window | ~8:00–10:00 p.m. | Gentle "had dinner?" if not logged | in-chat default (Y/G); external optional |
 
 Rules:
 - Weight only on M/W/F; never daily; skippable; not on Red mornings.
-- Meal nudges are opt-in and gentle; one ask per window; no calories, no moralizing; never on Red days.
+- Meal checks: in-chat time-aware meal checks are active by default on Yellow/Green (one gentle ask per window if not logged); external scheduled meal reminders are optional/opt-in. One ask per window; no calories, no moralizing; never on Red days.
 - Do not add these to the default starter set. Start with Morning, Post-Scrum, Night Review, Weekly Review; add weight M/W/F if Sundar wants tracking; add meal windows only on request.
 
 ### Weight Check Task (ChatGPT Tasks pattern)

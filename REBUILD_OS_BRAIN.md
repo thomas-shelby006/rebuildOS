@@ -231,7 +231,7 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Usual mood/energy band: not yet established
 
 ### Current week — daily rows (most detail)
-| Date / day | Day quality | Sleep (sleep→wake / qual) | Meals (B/L/D + quality) | Movement | Mood/Energy | Weight (M/W/F) | Drift | Note |
+| Date / day | Day quality (bad/rough/okay/good/strong) | Sleep (sleep→wake / qual) | Meals (B/L/D + quality) | Movement | Mood/Energy | Weight (M/W/F) | Drift | Note (incl. hygiene when relevant) |
 |---|---|---|---|---|---|---|---|---|
 | | | | | | | | | |
 
@@ -246,9 +246,11 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 ### Trends and known correlations/patterns
 - Sleep trend:
 - Meal regularity trend:
+- Day-quality trend (bad/rough/okay/good/strong distribution):
 - Mood/energy trend:
 - Weight direction (4-week):
 - Drift pattern trend:
+- Hygiene/basic-routine notes (when relevant; e.g., low-zone days):
 - Known correlations:
 - Detected recurring patterns to watch:
 

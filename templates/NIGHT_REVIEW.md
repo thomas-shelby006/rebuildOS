@@ -164,13 +164,14 @@ Capture only what is known — do not interrogate:
 
 ```text
 Date/day:
-Day quality (word or 1-3):
+Day quality (bad/rough/okay/good/strong) + optional reason:
 Sleep (sleep→wake / quality 1-3):
 Meals (B/L/D + rough quality; note skips/reasons):
 Movement (walk/gym/steps):
 Mood/energy (1-3) + shame flag if present:
 Weight (only if M/W/F and checked):
+Hygiene/basic routine (when relevant; teeth/bath/clothes/room):
 Drift/avoidance:
 ```
 
-Rules: no calories, no food/weight moralizing. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
+Rules: no calories, no food/weight moralizing. If dinner is not yet logged on a Yellow/Green evening, ask once before closing. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.

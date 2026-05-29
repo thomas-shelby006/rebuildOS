@@ -31,6 +31,8 @@ Should this be added to the brain? yes/no
 
 ## Life signals reminder examples (v3.3)
 - "Rebuild OS weight check (M/W/F): weight today? Skip is fine." (only Mon/Wed/Fri morning; not on Red days)
-- "Rebuild OS lunch window: had lunch? (or skipped?)" (optional, opt-in, gentle, once)
+- "Rebuild OS lunch window: had lunch? (or skipped?)" (external reminder is optional/opt-in, gentle, once)
+
+Note: in-chat time-aware meal checks are active by default on Yellow/Green; these external meal reminders are the optional layer.
 
 Reminders are nudges only; the data lives in `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 35, not in the reminder. No calories, no moralizing.

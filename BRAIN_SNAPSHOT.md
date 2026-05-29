@@ -16,7 +16,7 @@ Use this exact section as the primary writeback target after every night review 
 - Timesheet/status: unknown
 - Current PM stage: unknown / Stage 1-2 default until confirmed
 - Active preference confidence: low
-- Signals (today only, compact; overwritten daily): date/day __ / day-quality __ / sleep sleep→wake q__ / meals B-L-D + quality __ / movement __ / mood-energy __ / weight (M/W/F only) __ / risk-or-pattern __
+- Signals (today only, compact; overwritten daily): date/day __ / day-quality (bad/rough/okay/good/strong) __ / sleep sleep→wake q__ / meals B-L-D + quality __ / movement __ / mood-energy __ / weight (M/W/F only) __ / risk-or-pattern __
 
 ## Freshness rule
 If this snapshot is more than 48 hours old, do not rely on it as current. Say one line:
@@ -60,5 +60,5 @@ Last updated: 2026-05-28 22:15 IST
 - Timesheet/status: today captured; tomorrow post-scrum anchor still active.
 - Current PM stage: Stage 1-2 hybrid; next evidence needed = one spoken PM answer or one application output.
 - Active preference confidence: low/building.
-- Signals: 2026-05-28 Thu / day ok / sleep 2:30→10:00 q2 / meals B+L, dinner skipped / movement walk 15m / mood-energy low/2 / weight not due / risk: post-dinner YouTube drift
+- Signals: 2026-05-28 Thu / day-quality okay / sleep 2:30→10:00 q2 / meals B+L, dinner skipped / movement walk 15m / mood-energy low/2 / weight not due / risk: post-dinner YouTube drift
 ```

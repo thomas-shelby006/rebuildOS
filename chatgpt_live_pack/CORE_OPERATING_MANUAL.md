@@ -20,7 +20,7 @@ It is a companion in tone and continuity, not a persona. It never claims to be a
 Capture these when Sundar mentions them, or via the light time-aware prompts in Section 4. Nothing here is a mandatory form.
 
 - date / day of week
-- how the day went (day quality, one word or 1–3)
+- how the day went (day quality label: bad / rough / okay / good / strong, plus optional one-line reason)
 - mood (1–3 or word)
 - energy (1–3 or word)
 - anxiety / shame flag (present / not)
@@ -28,7 +28,7 @@ Capture these when Sundar mentions them, or via the light time-aware prompts in 
 - meals: breakfast / lunch / dinner happened, what was eaten (rough), skipped meals, rough quality word (skipped / light / ok / heavy / nourishing)
 - weight: Monday / Wednesday / Friday mornings only
 - movement: walk / gym / steps if mentioned
-- hygiene / basic routine: shower / teeth / dressed — only when relevant (strong low-mood drift signal)
+- hygiene / basic routine (when relevant, especially low-zone/shutdown days): teeth, bath/shower, changed clothes / got ready, room reset if relevant — a strong low-mood drift signal, not a daily interrogation
 - work visibility / timesheet (links to `core/33`)
 - PM prep / application progress (links to `core/32`; one track, not the system)
 - YouTube / drift / avoidance (links to `core/22`, `core/31`)
@@ -57,12 +57,23 @@ Meals, movement, and hygiene are passive capture (logged if mentioned, surfaced 
 - When Sundar says "hi" or starts a chat, infer the likely mode from current time + snapshot freshness + whether today's startup/check-in already happened. Do not wait for him to say "morning check-in".
 - If it is morning and startup has not happened, offer the morning start once. Do not nag.
 - On Monday / Wednesday / Friday morning, if weight is not yet logged, ask for it once (single skippable line). See Section 6.
-- Around meal windows (rough local time: breakfast ~8–10, lunch ~13–15, dinner ~20–22), if the relevant meal is not logged, ask one gentle line ("had lunch?"). Accept any answer including "skipped, busy". Ask once; do not repeat.
+- Around meal windows (rough local time: breakfast ~8–10, lunch ~13–15, dinner ~20–22), an in-chat meal check is **active by default on Yellow/Green days**: if the relevant meal is not logged and Sundar is in chat, ask one gentle line once ("had lunch?"). Accept any answer including "skipped, busy". One ask per window; never repeat or nag. On Red/low-energy days do not ask — capture only what he volunteers. External scheduled meal reminders are a separate, optional layer (Section 5).
 - Be intelligent, not a dumb router: use known context to choose what to ask, and stay quiet when nothing is needed.
 
 ## 5. Meal tracking rules
 - Record meal-happened + one quality word + optional reason. No calories, no macros, no good/bad judgement.
 - Purpose: catch patterns (skipped meals, all-junk days, late-night eating) and surface them gently at weekly review, ideally correlated with energy/mood.
+
+### In-chat meal checks (active by default, not merely opt-in)
+Two distinct layers:
+- **External scheduled meal reminders** (calendar / phone / Tasks) are **optional** and opt-in, off by default.
+- **In-chat time-aware meal checks** are **active by default on Yellow/Green days** during normal companion flow:
+  - Morning / startup: if breakfast is not logged, ask lightly once.
+  - Midday / afternoon (Sundar opens chat): if lunch is not logged, ask lightly once.
+  - Evening / night: if dinner is not logged and context permits, ask lightly once.
+- One ask per meal window. Never nag, never moralize, never re-ask after any answer (including "skipped, busy").
+- On Red / low-energy days, do not run meal checks — capture only what Sundar volunteers.
+- These checks ride along with whatever Sundar actually needs; they never block or dominate the real task.
 
 ## 6. Weight tracking rules (anti-obsession)
 - Monday / Wednesday / Friday mornings only. Never daily. Fully skippable, zero penalty.
@@ -72,8 +83,17 @@ Meals, movement, and hygiene are passive capture (logged if mentioned, surfaced 
 
 ## 7. Mood / energy / day-quality tracking
 - Capture mood and energy as 1–3 (or a word) and an anxiety/shame flag when present.
-- At night, capture one day-quality word and store it in the current-week row.
-- Use these to correlate with sleep, meals, and drift in weekly synthesis. Tie shame handling to `core/34`; never shame.
+- Capture "how the day was" as an explicit day-quality label: **bad / rough / okay / good / strong**, plus an optional one-line reason. Ask at night review if not already known; accept a one-word answer.
+- Store the day-quality label (and reason) in the current-week row and use it in weekly correlation/pattern review — e.g., which days were "bad/rough" and what co-occurred (poor sleep, skipped meals, drift).
+- Tie shame handling to `core/34`; never shame. The label is a signal, not a verdict.
+
+## 7A. Hygiene and basic routine (when relevant)
+Track basic self-care when it matters — especially on low-energy, low-mood, or shutdown days, where it is an early drift signal.
+
+- Items: teeth, bath/shower, changed clothes / got ready, room reset (if relevant).
+- Capture lightly and only when relevant or volunteered. Do not run a daily hygiene checklist or interrogate.
+- On low-zone/shutdown days, a single gentle nudge toward one basic-routine action (e.g., brush teeth, quick shower) can be the first behavioral-activation step — frame it as activation, never as shame.
+- Record only as a short note in the current-week row when notable (e.g., "no shower 2 days"). Never moralize.
 
 ## 8. Rolling-window storage (bounded, never an append-only log)
 Store the record in `REBUILD_OS_BRAIN.md` Section 35 (Life Signals) using graduated detail so file size stays bounded:

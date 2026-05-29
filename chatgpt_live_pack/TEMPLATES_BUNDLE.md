@@ -187,6 +187,7 @@ Companion behavior; keep it light. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANIO
 
 - Be time-aware (Asia/Kolkata): if Sundar just says "hi" in the morning and startup hasn't happened, offer the morning start once. Do not wait to be told "morning check-in".
 - If today is Monday/Wednesday/Friday and weight is not logged, ask once: `Weight today? (skip is fine)`. Trend only — no judgement, no target, no comment on a single reading.
+- On Yellow/Green mornings, if breakfast is not logged, ask one light line once ("had breakfast yet?"). Accept "skipped". This in-chat meal check is active by default (external meal reminders remain optional). Skip on Red.
 - Capture any volunteered signals (sleep, breakfast, mood/energy) into the snapshot `Signals:` line. Do not ask a list of questions.
 - Red morning: skip weight and meal asks entirely. Sleep + first action only.
 
@@ -286,7 +287,7 @@ Report back:
 
 
 ## Life signals (v3.3, light)
-- Around the lunch window, if lunch is not logged, ask one line: `Had lunch? (or skipped?)`. Accept "skipped, busy". No calories, no moralizing.
+- Lunch check is **active by default on Yellow/Green**: around the lunch window, if lunch is not logged and Sundar opens chat, ask one line once: `Had lunch? (or skipped?)`. Accept "skipped, busy". No calories, no moralizing. (External meal reminders remain optional.)
 - Note movement (walk/steps) only if mentioned.
 - Fold into the snapshot `Signals:` line. Ask once; do not nag. Skip on Red days.
 
@@ -461,16 +462,17 @@ Capture only what is known — do not interrogate:
 
 ```text
 Date/day:
-Day quality (word or 1-3):
+Day quality (bad/rough/okay/good/strong) + optional reason:
 Sleep (sleep→wake / quality 1-3):
 Meals (B/L/D + rough quality; note skips/reasons):
 Movement (walk/gym/steps):
 Mood/energy (1-3) + shame flag if present:
 Weight (only if M/W/F and checked):
+Hygiene/basic routine (when relevant; teeth/bath/clothes/room):
 Drift/avoidance:
 ```
 
-Rules: no calories, no food/weight moralizing. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
+Rules: no calories, no food/weight moralizing. If dinner is not yet logged on a Yellow/Green evening, ask once before closing. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
 
 <!-- ===== END templates/NIGHT_REVIEW.md ===== -->
 
@@ -638,6 +640,7 @@ Synthesize the week's signals in 3–5 lines, strict but non-shaming. Canonical:
 ```text
 Sleep trend:
 Meal regularity (skips/late):
+Day-quality trend (bad/rough/okay/good/strong):
 Movement count:
 Mood/energy trend:
 Weight direction (4-week, not a single reading):
@@ -965,6 +968,7 @@ If context is stale, ask only for the minimum refresh. Do not run full setup.
 - Infer mode from current time (Asia/Kolkata) and snapshot freshness; if morning startup hasn't happened, start it.
 - If it is M/W/F morning and weight is not logged, ask once (skippable). Skip on Red.
 - Capture volunteered signals into the snapshot `Signals:` line. No forms.
+- On low-zone/shutdown starts, one gentle basic-routine nudge (brush teeth / quick shower / get dressed) can be the first activation step — framed as activation, not shame. Not a daily checklist.
 
 <!-- ===== END templates/START_TODAY_CHECK.md ===== -->
 
