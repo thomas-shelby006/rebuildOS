@@ -28,6 +28,17 @@ This is well under the ChatGPT Plus per-project file cap (~20), leaving headroom
 
 Paste the content of `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md` into the Project's **Instructions** field (keep it concise; full detail lives in the uploaded `core_00_PROJECT_INSTRUCTIONS.md`).
 
+## Startup sanity test
+
+After setup, send a short morning test message. Expected behavior:
+- infer morning mode from India time;
+- ask current capacity;
+- include one light routine anchor if relevant;
+- ask a scheduled check only if due;
+- avoid a long intake form.
+
+If the response is too long, say: `Use Rebuild OS minimum startup. Main need first. One proactive signal question max.`
+
 ## Mutable files — re-upload when they change
 
 ChatGPT cannot rewrite uploaded files automatically; persistence is **manual re-upload**. After a night/weekly review or preference consolidation, re-upload whichever changed, using the flattened names:
@@ -41,7 +52,8 @@ ChatGPT cannot rewrite uploaded files automatically; persistence is **manual re-
 
 - The repo ZIP (`rebuild_os_github_ready_repo.zip`) is **archive only** — not ChatGPT Project knowledge (ZIPs are not indexed as knowledge).
 - **Tasks/reminders are nudges only**, not the data store. Life signals live in `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 35.
-- Life Signals: weight only Mon/Wed/Fri mornings; in-chat meal checks active by default on Yellow/Green (external meal reminders optional); no calories; no moralizing; Red days stay light.
+- Life Signals: scheduled checks are limited, in-chat checks are light, and Red days stay light.
+- First 7 days of v3.3 are calibration, not judgment. If data is sparse, weekly review should say `baseline forming` and avoid confident trend claims.
 
 ## Regenerating this pack
 
