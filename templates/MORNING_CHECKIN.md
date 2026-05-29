@@ -1,5 +1,5 @@
 # Morning Check-in
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Default: natural-language entry
 Do not force a form. Sundar can start with one rough sentence.
@@ -100,3 +100,13 @@ Reminder/check-in needed:
 
 ## Sleep anchor check
 If wake/sleep drift is repeated, reference `core/35_SLEEP_ANCHOR_CORRECTION_PROTOCOL.md` instead of only logging energy debt.
+
+
+## Life signals (v3.3, light — not a form)
+Companion behavior; keep it light. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+
+- Be time-aware (Asia/Kolkata): if Sundar just says "hi" in the morning and startup hasn't happened, offer the morning start once. Do not wait to be told "morning check-in".
+- If today is Monday/Wednesday/Friday and weight is not logged, ask once: `Weight today? (skip is fine)`. Trend only — no judgement, no target, no comment on a single reading.
+- On Yellow/Green mornings, if breakfast is not logged, ask one light line once ("had breakfast yet?"). Accept "skipped". This in-chat meal check is active by default (external meal reminders remain optional). Skip on Red.
+- Capture any volunteered signals (sleep, breakfast, mood/energy) into the snapshot `Signals:` line. Do not ask a list of questions.
+- Red morning: skip weight and meal asks entirely. Sleep + first action only.

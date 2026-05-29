@@ -1,5 +1,23 @@
 # Changelog
 
+## v3.3 Life Signals — 2026-05-29
+
+Added, at Sundar's explicit request, active life-signal tracking + time-aware companion behavior, and the ChatGPT Live Pack hybrid packaging.
+
+- Promoted Life Signals from deferred design into the active system: new `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+- `REBUILD_OS_BRAIN.md`: new Section 35 Life Signals (bounded rolling window — detailed current week, summarized recent weeks, compressed older months); Handoff renumbered to Section 36.
+- `BRAIN_SNAPSHOT.md`: operational compact `Signals:` line (date/day, day-quality, sleep, meals, movement, mood/energy, weight M/W/F, risk/pattern), overwritten daily — never an append-only log.
+- `core/00_PROJECT_INSTRUCTIONS.md` Section 7A made active: time-aware (Asia/Kolkata) mode inference, weight M/W/F morning ask, gentle meal-window checks, casual `log:` capture, proactive pattern detection, Red-day exemption.
+- Templates updated for signals: MORNING_CHECKIN, MIDDAY_ANCHOR_CHECK, NIGHT_REVIEW, WEEKLY_REVIEW, START_TODAY_CHECK, ROADBLOCK_CHECK. New: `templates/LIFE_SIGNAL_CAPTURE.md`, `templates/WEIGHT_CHECK.md`.
+- `core/18_COMMAND_MENU.md`: new Life signals commands (`log:`, `life update:`, `signals`, `weight check`, `meal check`, `how was my week?`, `pattern check`).
+- Reminders: `core/16`, `core/25`, `templates/REMINDER_SETUP` add weight M/W/F + opt-in gentle meal windows; reminders are nudges only.
+- ChatGPT Live Pack: new `chatgpt_live_pack/` with generated `CORE_OPERATING_MANUAL.md` + `TEMPLATES_BUNDLE.md` bundles, curated copies, and `UPLOAD_README.md`. Source files remain canonical; bundles are generated artifacts.
+- Loading/platform/docs updated: `core/21`, `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md`, `README.md`, `FEATURE_COMPLETION_MATRIX.md`, `REBUILD_OS_ALL_IN_ONE.md`.
+- Preserved hard rules: English-only, strict but non-shaming, no therapist claim, no romantic/sexual framing, no heavy escalation, PM as one track, latest explicit instruction wins. No source files removed. No calories/macros; no food/weight moralizing; Red days stay light.
+
+---
+
+
 ## v3.2.2 Snapshot Mini-Refresh Patch — 2026-05-28
 
 - Applied final Claude deployment review.

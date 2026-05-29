@@ -1,5 +1,5 @@
 # Reminders and Check-ins
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Purpose
 Rebuild OS is primarily a conversational system, but serious commitments need external triggers. A plan inside chat is not enough for time-sensitive or repeated-miss items.
@@ -89,3 +89,12 @@ If a reminder is ignored twice, do not add more reminders. Diagnose:
 
 ## Do not spam
 A reminder system that creates noise will be ignored. Use fewer, stronger reminders.
+
+
+## Life signals reminders (v3.3)
+Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. Reminders are nudges only — the brain/snapshot hold the data, not the reminder.
+
+- Weight check: Monday / Wednesday / Friday morning. One short, skippable nudge. Do not remind on other days. Do not remind on Red mornings.
+- Meal windows — two layers: **in-chat** time-aware meal checks are **active by default on Yellow/Green** (see `core/44` and the check-in templates); **external** scheduled meal reminders (calendar/phone/Tasks) are **optional/opt-in**, off by default. One ask per window; never nag; never on Red days.
+- Keep it gentle and opt-in. If ignored twice, reduce or pause — do not escalate.
+- Tasks/reminders never store life data; they only prompt. Signals live in `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 35.

@@ -1,5 +1,5 @@
 # Weekly Review
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Default: minimum weekly review
 Target duration: 5 minutes. Use this unless Sundar asks for full review or there is a serious pattern to analyze.
@@ -93,7 +93,6 @@ If the week improved, preserve the system and add only one expansion.
 ## Bad week rule
 If the week was unstable, reduce scope and fix one anchor.
 
-
 ## Preference consolidation and export step
 Run this if there are raw preference feedback entries, held preferences needing review, or Sundar asks for it.
 
@@ -135,7 +134,6 @@ Replace core/40_PREFERENCE_FEEDBACK_LEDGER.md with this content:
 
 Use `templates/PREFERENCE_CONSOLIDATION.md` and `templates/PREFERENCE_EXPORT.md` for exact formatting. Weekly review must not finish a successful preference consolidation without offering export blocks.
 
-
 ## Snapshot writeback after weekly review
 After weekly review, update `BRAIN_SNAPSHOT.md` with:
 - last session outcome: weekly review completed + key pattern
@@ -151,3 +149,44 @@ Review only two streaks during the v2.6 test period:
 - Night review streak
 
 If either streak becomes a shame trigger, stop displaying streak numbers in normal check-ins and keep the behavior tracked silently.
+
+## Life signals synthesis (v3.3)
+Synthesize the week's signals in a useful pattern summary, strict but non-shaming. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+
+Required output:
+```text
+Life Signals weekly pattern summary:
+- 3 wins:
+- 3 misses:
+- 2 patterns detected:
+- 1 likely correlation:
+- 1 adjustment for next week:
+- 1 thing to stop tracking if not useful:
+- Confidence: confirmed / inferred / missing mix
+```
+
+Also include:
+```text
+Sleep trend:
+Meal regularity (skips/late):
+Day-quality trend (bad/rough/okay/good/strong):
+Movement count:
+Mood/energy trend:
+Weight direction (4-week, not a single reading):
+Drift pattern:
+Improvement or decline vs last week:
+```
+
+If this is the first 7 days of v3.3 or data is sparse, say: `baseline forming`. Do not overclaim a trend from one week, inferred data, or missing data.
+
+## PM roadmap intake/accountability
+If Sundar provides a PM roadmap later, do not invent missing details. Ingest it as a structured accountability track:
+- roadmap phase
+- next milestone
+- weekly output target
+- blockers
+- missed item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+
+PM remains one important track, not the whole OS.
+
+Then age the rolling window in `REBUILD_OS_BRAIN.md` Section 35: push the oldest detailed week into a weekly summary row; at month end, compress four weekly summaries into one monthly line. Keep the section bounded. No calories, no moralizing.

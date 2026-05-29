@@ -1,5 +1,5 @@
 # Feature Completion Matrix
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 | Area | Status | Primary files |
 |---|---|---|
@@ -21,6 +21,8 @@ Version: v3.2 Deployment Ready
 | Transition mode | Complete | `core/39_TRANSITION_MODE.md` |
 | Preference adaptation | Complete | `core/40_PREFERENCE_FEEDBACK_LEDGER.md`, `core/41_ACTIVE_PREFERENCE_PROFILE.md`, `templates/PREFERENCE_EXPORT.md` |
 | Launch hardening | Complete | `core/42_FIRST_WEEK_ROADBLOCK_PLAYBOOK.md`, `core/43_LAUNCH_RUNBOOK.md` |
+| Life signals + companion mode | Complete (v3.3) | `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`, `REBUILD_OS_BRAIN.md` Section 35, `templates/LIFE_SIGNAL_CAPTURE.md`, `templates/WEIGHT_CHECK.md` |
+| ChatGPT Live Pack (hybrid packaging) | Complete (v3.3) | `chatgpt_live_pack/`, `chatgpt_live_pack/UPLOAD_README.md` |
 | Platform adapters | Complete | `platforms/` |
 
 Deployment recommendation: run for 7 days before changing system design.

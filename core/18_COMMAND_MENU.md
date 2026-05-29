@@ -1,5 +1,5 @@
 # Command Menu
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 Commands are optional. Natural language should work too.
 
@@ -41,7 +41,16 @@ Use these 12 first. Everything else is specialist/reference.
 - `Identity proof`
 - `Engagement check`
 - `PM stage check`
-- `log:` / `life update:` — capture a casual life signal (sleep, meals, movement, mood/energy, weight) without a form. Phase 0 capture only; full tracking deferred to v3.3 (`audit/NEXT_LIFE_SIGNALS_DESIGN.md`).
+
+### Life signals (v3.3)
+- `log:` / `life update:` — capture a casual life signal without a form (e.g., `log: dosa for breakfast`). Runs `templates/LIFE_SIGNAL_CAPTURE.md`.
+- `signals` — show today's compact `Signals:` line and what is still unlogged.
+- `weight check` — Monday/Wednesday/Friday weight capture; runs `templates/WEIGHT_CHECK.md`. Trend only, no judgement.
+- `meal check` — light meal-window check (had breakfast/lunch/dinner?). No calories, no moralizing.
+- `how was my week?` — Life Signals weekly synthesis (trends, one correlation, one adjustment).
+- `pattern check` — surface recurring life-signal patterns to watch.
+
+Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. Red days: capture only; no asks.
 
 ### Work visibility
 - `Work visibility check`
