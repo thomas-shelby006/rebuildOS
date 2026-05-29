@@ -16,6 +16,7 @@ Use this exact section as the primary writeback target after every night review 
 - Timesheet/status: unknown
 - Current PM stage: unknown / Stage 1-2 default until confirmed
 - Active preference confidence: low
+- Signals (optional, today only): sleep __ / meals __ / movement __ / mood-energy __ / weight if checked __
 
 ## Freshness rule
 If this snapshot is more than 48 hours old, do not rely on it as current. Say one line:
@@ -39,6 +40,7 @@ Required writeback fields:
 - Current PM stage if changed
 - Sleep debt / sleep anchor if relevant
 - Active preference confidence if changed
+- Optional: one compact `Signals:` line (today only; overwritten each day, never an append-only log). Full life tracking is deferred to v3.3 per `audit/NEXT_LIFE_SIGNALS_DESIGN.md`.
 
 ## Filled example after night review
 This is the target format. Do not turn the snapshot into a long journal.
@@ -58,4 +60,5 @@ Last updated: 2026-05-28 22:15 IST
 - Timesheet/status: today captured; tomorrow post-scrum anchor still active.
 - Current PM stage: Stage 1-2 hybrid; next evidence needed = one spoken PM answer or one application output.
 - Active preference confidence: low/building.
+- Signals: sleep 2:30→10:00 / meals B+L, dinner skipped / movement walk 15m / mood-energy low/2 / weight not due
 ```
