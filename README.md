@@ -26,6 +26,7 @@ It helps Sundar:
 - progress toward PM roles without making PM the whole system
 - run night and weekly reviews without punishment
 - track life signals as bounded week-to-week patterns
+- track the supplement routine only after explicit activation
 - preserve context through `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md`
 - adapt over time through preference feedback and the active preference profile
 
@@ -67,10 +68,13 @@ Core commands:
 - `Night review`
 - `Weekly review`
 - `Export preferences`
+- `Activate supplement routine` — optional; starts supplement tracking only when Sundar chooses
 
 ## First 7 real-use days
 
 The first 7 real-use days after v3.3 activation are calibration + feature freeze.
+
+Supplement Routine ships with v3.4 but is dormant. It is not active, does not add first-week burden, and does not prompt/remind until Sundar explicitly says `Activate supplement routine`.
 
 Allowed during first use:
 
@@ -95,6 +99,7 @@ Everything else goes to System Notes and weekly review. Weekly review decides ke
 - `REBUILD_OS_ALL_IN_ONE.md` = fallback-only single-file recovery. Do not upload with normal live pack by default.
 - `templates/` = command-specific workflows.
 - `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md` = active life-signal tracking + time-aware companion rules.
+- `core/45_SUPPLEMENT_ROUTINE_TRACKING.md` = dormant supplement routine tracking; active only after explicit activation.
 - `chatgpt_live_pack/` = generated upload artifact for ChatGPT Project.
 - `platforms/` = Claude / ChatGPT / Canvas adapters.
 - `audit/` = setup and validation only.
