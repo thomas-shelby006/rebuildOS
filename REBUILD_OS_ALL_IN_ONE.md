@@ -1,8 +1,8 @@
-# Rebuild OS v3.3 Life Signals — All In One
+# Rebuild OS v3.4 Coherence and Deployment Hardening — All In One
 
-> GENERATED ARTIFACT. Fully regenerated from the canonical v3.3 source files by build_all_in_one.sh.
-> Single-file fallback. Use only if individual file loading fails. Individual files are canonical; if this file disagrees, the individual files win.
-> Includes: README, BRAIN_SNAPSHOT, REBUILD_OS_BRAIN, all core/ modules (incl. core/44 Life Signals), all templates/, platform adapters, source map, and changelog.
+> GENERATED ARTIFACT. Fully regenerated from canonical v3.4 source files by build_all_in_one.sh.
+> Single-file fallback. Use only if normal live-pack loading fails. Individual files are canonical; if this file disagrees, the individual files win.
+> Includes: root orientation/use docs, live state, all core/ modules, all templates/, platform adapters, current audit notes, Kiro steering, source map, and changelog.
 
 <!-- ===== BEGIN README.md ===== -->
 
@@ -151,6 +151,301 @@ System improvement is not the daily system. Before starting Rebuild OS editing, 
 - Latest explicit update wins.
 
 <!-- ===== END README.md ===== -->
+
+
+<!-- ===== BEGIN VERSION.md ===== -->
+
+# Rebuild OS Version
+
+Current: v3.3 Life Signals
+Pending: v3.4 Coherence and Deployment Hardening
+
+Rules:
+- VERSION is current status.
+- CHANGELOG is history.
+- Canonical folders: core, templates, platforms.
+- chatgpt_live_pack is an upload bundle.
+- audit/history is archive.
+- Generated bundles are derived files.
+- Merge to main only after explicit final approval.
+
+<!-- ===== END VERSION.md ===== -->
+
+
+<!-- ===== BEGIN DEPLOYMENT_CHECKLIST.md ===== -->
+
+# Rebuild OS — Deployment Checklist
+Version: v3.4 pre-use enablement
+
+Purpose: prevent wrong-file upload, duplicate rule loading, and setup drift.
+
+## Before upload
+
+- [ ] PR #3 source files are reviewed.
+- [ ] Generated artifacts are regenerated after final source edits.
+- [ ] `REBUILD_OS_ALL_IN_ONE.md` is treated as fallback only.
+- [ ] Normal live pack and all-in-one are not uploaded together.
+- [ ] Repo remains private.
+- [ ] Mutable files are identified.
+
+## Regenerate artifacts
+
+Run from repo root:
+
+```bash
+bash build_all_in_one.sh
+bash build_chatgpt_pack.sh
+```
+
+Expected generated files:
+
+- `REBUILD_OS_ALL_IN_ONE.md`
+- `chatgpt_live_pack/CORE_OPERATING_MANUAL.md`
+- `chatgpt_live_pack/TEMPLATES_BUNDLE.md`
+- flattened live-pack copies
+
+## Validate generated artifacts
+
+```bash
+grep -q "PM_ROADMAP_INTAKE" chatgpt_live_pack/TEMPLATES_BUNDLE.md
+grep -q "Active PM Roadmap" chatgpt_live_pack/CORE_OPERATING_MANUAL.md
+grep -q "Agent coordination" REBUILD_OS_ALL_IN_ONE.md
+grep -q "Tools-down work mode" REBUILD_OS_ALL_IN_ONE.md
+grep -q "cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b" REBUILD_OS_ALL_IN_ONE.md
+```
+
+## Default ChatGPT Project upload
+
+Upload from `chatgpt_live_pack/`:
+
+- [ ] `BRAIN_SNAPSHOT.md`
+- [ ] `REBUILD_OS_BRAIN.md`
+- [ ] `core_41_ACTIVE_PREFERENCE_PROFILE.md`
+- [ ] `core_40_PREFERENCE_FEEDBACK_LEDGER.md`, if needed
+- [ ] `core_00_PROJECT_INSTRUCTIONS.md`
+- [ ] `core_21_FILE_LOADING_PRIORITY_GUIDE.md`
+- [ ] `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md`
+- [ ] `CORE_OPERATING_MANUAL.md`
+- [ ] `TEMPLATES_BUNDLE.md`
+
+Do not upload `REBUILD_OS_ALL_IN_ONE.md` with this default set.
+
+## Project Instructions
+
+Paste the contents of:
+
+```text
+chatgpt_live_pack/platforms_CHATGPT_PROJECT_INSTRUCTIONS.md
+```
+
+into the ChatGPT Project Instructions field.
+
+## Fallback upload strategy
+
+Use only if normal live pack cannot be used:
+
+- [ ] Upload `REBUILD_OS_ALL_IN_ONE.md` alone.
+- [ ] Do not upload normal live pack at the same time.
+
+## Smoke tests
+
+Morning test:
+
+```text
+Hi. It is morning in India. I just woke up and have not eaten yet.
+```
+
+Expected:
+
+- morning mode;
+- capacity question;
+- one food/routine anchor;
+- no long form.
+
+Night test:
+
+```text
+Night review minimum:
+Capacity today: Yellow
+One thing done: attended scrum
+One thing missed: PM prep
+Tomorrow's first action: breakfast before scrum
+```
+
+Expected:
+
+- classify the miss;
+- update snapshot fields;
+- no more than two signal questions;
+- no report-card tone.
+
+## First 7 days
+
+- [ ] Do not add features unless a rule blocks use today.
+- [ ] Capture system issues as System Notes.
+- [ ] Use `FIRST_REAL_USE_SCRIPT.md`.
+- [ ] Review after 7 real-use days.
+
+## Mutable file re-upload
+
+After night/weekly review, re-upload only files that changed:
+
+- [ ] `BRAIN_SNAPSHOT.md`
+- [ ] `REBUILD_OS_BRAIN.md`
+- [ ] `core_41_ACTIVE_PREFERENCE_PROFILE.md`, if changed
+- [ ] `core_40_PREFERENCE_FEEDBACK_LEDGER.md`, if changed
+
+## Do not merge until
+
+- [ ] Generated artifacts are regenerated.
+- [ ] Smoke tests pass.
+- [ ] PR #3 is reviewed.
+- [ ] Sundar explicitly says final approved and instructs merge.
+
+<!-- ===== END DEPLOYMENT_CHECKLIST.md ===== -->
+
+
+<!-- ===== BEGIN FIRST_REAL_USE_SCRIPT.md ===== -->
+
+# Rebuild OS — First Real Use Script
+Version: v3.4 pre-use enablement
+
+Purpose: move from setup into actual use without more system-building.
+
+## Core rule
+
+Use the system before improving it further. During the first 7 real-use days, capture improvement ideas as System Notes unless a rule blocks today's action.
+
+## Day 0 setup
+
+1. Upload the normal ChatGPT live pack only.
+2. Do not upload the all-in-one fallback with the normal live pack.
+3. Paste `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md` into ChatGPT Project Instructions.
+4. Run the smoke test.
+5. If the smoke test passes, stop setup.
+
+## Morning smoke test
+
+Send:
+
+```text
+Hi. It is morning in India. I just woke up and have not eaten yet.
+```
+
+Expected behavior:
+
+- infer morning mode;
+- ask current capacity;
+- give one light food/routine anchor;
+- ask scheduled checks only if due;
+- avoid a long form;
+- ask max one proactive signal question.
+
+If output is too long, say:
+
+```text
+Use Rebuild OS minimum mode. Main need first. One proactive signal question max.
+```
+
+## Daily start
+
+Use a rough message:
+
+```text
+Hi. I woke at __. First obligation is __. Capacity is __.
+```
+
+The system should return a short plan and one first action.
+
+## During the day
+
+Natural updates are enough:
+
+```text
+log: breakfast done
+log: skipped lunch, work was busy
+I am stuck on work
+I wasted time
+life update: energy low
+```
+
+The system should capture useful signals without turning the update into an interview.
+
+## Night review minimum
+
+```text
+Night review minimum:
+Capacity today:
+One thing done:
+One thing missed:
+Tomorrow's first action:
+```
+
+Expected behavior:
+
+- classify one missed item;
+- update snapshot fields;
+- ask no more than two signal questions;
+- avoid report-card tone.
+
+## Weekly review minimum
+
+```text
+Weekly review minimum:
+Stability score 5-15:
+One repeated pattern:
+One thing that worked:
+PM funnel line: apps __ / outreach __ / replies __ / interviews __
+Three non-negotiables for next week:
+```
+
+Expected behavior:
+
+- one honest pattern;
+- one next-week adjustment;
+- PM funnel diagnosis if relevant;
+- no long punishment report.
+
+## First 7 days: track lightly
+
+Track:
+
+- rough sleep/wake;
+- meal skips or irregularity;
+- rough mood/energy;
+- movement if any;
+- one work visibility signal;
+- PM minimum or miss;
+- weight only Monday/Wednesday/Friday morning.
+
+Do not track:
+
+- calories;
+- macros;
+- exhaustive food detail;
+- long explanations for every miss.
+
+## File update rule
+
+Daily: update `BRAIN_SNAPSHOT.md` if current state changed.
+
+Weekly: update `REBUILD_OS_BRAIN.md` and re-upload changed mutable files.
+
+## Stop system editing
+
+Stop editing and return to use if:
+
+- the smoke test passes;
+- a work/stability action is pending;
+- the improvement idea does not block today's action.
+
+Use:
+
+```text
+System note: [issue]. Not blocking today. Review at weekly review.
+```
+
+<!-- ===== END FIRST_REAL_USE_SCRIPT.md ===== -->
 
 
 <!-- ===== BEGIN BRAIN_SNAPSHOT.md ===== -->
@@ -8625,6 +8920,185 @@ Do not suggest new system features during normal use. Capture system feedback an
 If Sundar is blocked on starting or overwhelmed by the system, use `templates/START_TODAY_CHECK.md` or `core/43_LAUNCH_RUNBOOK.md` instead of explaining the full package.
 
 <!-- ===== END platforms/CLAUDE_PROJECT_INSTRUCTIONS.md ===== -->
+
+
+<!-- ===== BEGIN audit/V3_4_REQUIREMENT_COMPLETION_AUDIT.md ===== -->
+
+# v3.4 Requirement Completion Audit
+
+Status definitions:
+
+- **complete** = canonical sources, generated artifacts, and upload path are consistent.
+- **source-complete** = canonical files are updated but generated artifacts still need regeneration.
+- **partial** = the rule exists somewhere, but not everywhere it needs to be loaded.
+- **blocked** = waiting on tooling or regeneration.
+- **deferred** = intentionally postponed until real-use evidence exists.
+
+| Requirement | Status | Evidence | Remaining action | Risk if unfixed |
+|---|---|---|---|---|
+| 1. Life Signals tracking | complete | `core/44`, brain Section 35, snapshot Signals line, life-signal templates, and v3.3 merge | none | low |
+| 2. Rolling-window brain/snapshot | complete | `REBUILD_OS_BRAIN.md` Section 35 and `BRAIN_SNAPSHOT.md` bounded daily signal line | none | low |
+| 3. ChatGPT upload strategy | source-complete | `chatgpt_live_pack/UPLOAD_README.md` separates default live pack from all-in-one fallback | regenerate live-pack artifacts | low |
+| 4. PM roadmap intake | partial | `templates/PM_ROADMAP_INTAKE.md` exists and integrates the PM repo handoff model | refresh to latest Win2 handoff head and regenerate templates bundle | medium |
+| 5. PM funnel diagnostics | source-complete | `core/32` and `templates/WEEKLY_REVIEW.md` define funnel metrics and thresholds | regenerate bundles | medium |
+| 6. PM Red/Yellow/Green weekly gears | source-complete | `core/32` and PM intake define capacity-tier weekly versions | regenerate bundles | low |
+| 7. Current-job stability guardrail | source-complete | `core/32`, `core/33`, and operating rules protect work visibility | regenerate bundles | medium |
+| 8. Course-watching anti-fake-progress rule | source-complete | `core/32` says course watching must convert into output | regenerate bundles | low |
+| 9. No-overriding / source-of-truth hierarchy | partial | README and `.kiro/steering/edit-review-workflow.md` contain the rule | mirror concise runtime version into `core/00` and ChatGPT adapter | medium |
+| 10. Win1-first / ChatGPT fallback protocol | partial | README and `.kiro/steering/edit-review-workflow.md` contain the rule | mirror concise runtime version into `core/00` and ChatGPT adapter | medium |
+| 11. Merge-only-after-final-approval rule | source-complete | README and Kiro steering contain merge gate | optional runtime pointer | low |
+| 12. Generated artifact consistency | blocked | source files changed through GitHub API; generated artifacts not rebuilt | run `build_all_in_one.sh` and `build_chatgpt_pack.sh` | high |
+| 13. PM handoff pending/final status | partial | PM intake marks pending review but references need latest Win2 handoff head | update references to `cca0eb6...`, v1.1, `is_final: false` | medium |
+| 14. First-7-real-use-days calibration/freeze | partial | `core/44`, README, and brain mention baseline forming / first-use freeze | keep as v3.3 real-use start, start date unset until real use | low |
+| 15. Privacy/data-control note | complete | `chatgpt_live_pack/UPLOAD_README.md` includes privacy/data-control guidance | none | low |
+| 16. System-improvement-as-avoidance guardrail | source-complete | README and core operating rules mention system work must not replace daily floor | optional roadblock reinforcement | low |
+
+## Audit verdict
+
+No requirement is missing in design. The main remaining blocker is generated artifact consistency. The main source-level gaps are runtime visibility for the agent coordination/fallback protocol and stale PM handoff references.
+
+## Required closeout before merge
+
+1. Mirror the coordination/fallback/source hierarchy into runtime-loaded files.
+2. Refresh PM handoff references to Win2's latest handoff head: `cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b`, `PM_REBUILD_OS_HANDOFF.md` v1.1, `is_final: false`.
+3. Regenerate generated artifacts.
+4. Verify PR #3 mergeability.
+5. Do not merge until Sundar explicitly says final approved and instructs merge.
+
+<!-- ===== END audit/V3_4_REQUIREMENT_COMPLETION_AUDIT.md ===== -->
+
+
+<!-- ===== BEGIN .kiro/steering/edit-review-workflow.md ===== -->
+
+---
+inclusion: always
+---
+
+# Rebuild OS — Controlled Edit & Review Workflow
+
+This steering file defines how Kiro makes changes to this repository and how those changes are made reviewable by ChatGPT.
+
+## How Kiro should act on instructions
+
+- When Sundar gives a direct instruction to change repo/files, accept and implement it — do not stay in review-only mode.
+- Kiro may push back once if the request looks risky, conflicting, privacy-sensitive, or likely to break the system.
+- If Sundar confirms after that single pushback, proceed with his instruction unless it is technically impossible or clearly unsafe.
+- Keep edits supervised and transparent: show what changed through diffs, file lists, and summaries.
+
+## Branch + review flow
+
+Use this for every change set:
+
+1. Make changes on a feature branch, never directly on `main`.
+2. Commit with a clear, specific message.
+3. Push the branch to GitHub.
+4. Report back: branch URL, commit SHA(s), changed files, and a short summary.
+5. Open or update a PR for review.
+6. Do not merge to `main` unless Sundar explicitly says the final version is approved and instructs merge.
+
+## Merge gate
+
+Implementation complete does not mean merge approved.
+
+- PRs are review artifacts.
+- ChatGPT and Kiro can patch PR branches.
+- `main` changes only after explicit final merge approval from Sundar.
+- If Sundar says to keep improving or reviewing, keep the PR open.
+
+## Agent Coordination and Fallback Protocol
+
+### Roles
+
+- Sundar = final approver. Only Sundar authorizes merge to `main`.
+- ChatGPT = orchestrator, reviewer, decision logic, and fallback patcher.
+- Kiro Win1 = default Rebuild OS implementer/writer.
+- Kiro Win2 = PM transition plan owner in the `pm-transition-plan` repo.
+- PM repo = roadmap source.
+- Rebuild OS = accountability and execution system.
+
+### Implementation authority
+
+1. For Rebuild OS repo changes, Win1 gets the first implementation attempt.
+2. Win1 retries with available tools and alternate safe methods: edit tools, scripted edits, full-file rewrite after fresh re-read, and MCP/Git tools when available.
+3. If Win1 fails multiple clean attempts because write/exec tools are unavailable or blocked, ChatGPT may take over direct GitHub patching.
+4. ChatGPT takeovers must preserve Win1's latest validated plan/spec. Do not silently redesign.
+5. No one merges without Sundar explicitly saying final approved and instructing merge.
+6. `main` must not be updated directly.
+7. PRs are review artifacts, not final approval.
+
+### Source-of-truth hierarchy
+
+Use this hierarchy to prevent override drift:
+
+1. Latest explicit Sundar instruction wins.
+2. Rebuild OS canonical sources win over generated bundles/artifacts: root live files, `core/`, `templates/`, and `platforms/`.
+3. PM roadmap repo owns PM plan content.
+4. Rebuild OS owns accountability and execution tracking.
+5. ChatGPT prompts are orchestration/review instructions, not permanent canonical rules unless implemented into source files.
+6. Win2 handoff is input to Rebuild OS, not a replacement for Rebuild OS rules.
+7. If two instructions conflict, do not silently choose. Record the conflict, apply this hierarchy, and write the chosen resolution into the relevant source file and/or System Notes.
+
+### No contradictory generated content
+
+Generated bundles must not carry rules that contradict canonical sources. On conflict, regenerate from source; source wins.
+
+## How ChatGPT reviews Kiro's changes
+
+- Kiro pushes to a feature branch and shares the branch URL + summary.
+- Sundar shares that branch URL / diff with ChatGPT for review.
+- ChatGPT is the main Rebuild OS orchestrator/reviewer and may patch PR branches directly when Win1 fallback conditions are met.
+
+## Privacy gate
+
+- This repo contains personal life/behavioral data.
+- If the repo is public, warn Sundar once before pushing personal files.
+- If Sundar confirms to proceed anyway, follow his decision.
+
+<!-- ===== END .kiro/steering/edit-review-workflow.md ===== -->
+
+
+<!-- ===== BEGIN .kiro/steering/rebuild-os-review.md ===== -->
+
+---
+inclusion: always
+---
+
+# Rebuild OS Review Steering
+
+This repository contains Sundar's Rebuild OS Markdown package.
+
+## Role of Kiro / AI reviewer
+- Review and edit this package as a Markdown-based personal operating system.
+- Do not act as Sundar's daily Rebuild OS companion.
+- ChatGPT Project is the intended primary daily home.
+- Kiro/browser AI is for repository review, consistency checks, and controlled edits.
+
+## Direct user preferences to preserve
+- English output only, even if Sundar inputs Tamil/Tanglish.
+- Strict, direct, Claude-like accountability tone, but not blaming or shaming.
+- Do not falsely claim to be an actual therapist.
+- Do not add heavy crisis/escalation framing to normal Rebuild OS operation.
+- PM transition is one important track, not the whole system.
+- Latest explicit Sundar update wins unless it violates hard platform/safety constraints.
+- Deployment lock is active: no new features before 7 real-use days unless there is a true blocker.
+
+## Review priorities
+1. ChatGPT Plus primary deployment path.
+2. Startup path: FIRST_RUN_PROMPT, BRAIN_SNAPSHOT, REBUILD_OS_BRAIN, core/00, core/21.
+3. Red/low-energy usability.
+4. Work visibility and timesheet reliability.
+5. Preference persistence and export/re-upload loop.
+6. Handoff/new-thread continuity.
+7. Broken references, stale labels, contradictions, duplicate active rules.
+
+## Editing rules
+- Use supervised edits only.
+- Show diffs / list changed files before finalizing.
+- Make the smallest safe changes.
+- Do not rewrite the whole package.
+- Do not add new features unless they fix a deployment blocker.
+
+<!-- ===== END .kiro/steering/rebuild-os-review.md ===== -->
 
 
 <!-- ===== BEGIN references/SOURCE_MAP.md ===== -->
