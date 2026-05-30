@@ -29,9 +29,12 @@ Missed item classification:
 ```text
 Roadmap source: thomas-shelby006/pm-transition-plan
 Branch: pm-plan-v3-2-execution-hardening
-Commit: 515fa4b content commit / 7aa9ddd PR head
-Roadmap version: v3.2 execution hardening
-Status: pending PR review — do not treat as final until Sundar approves/merges PM PR
+Handoff head: cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b
+Handoff file: PM_REBUILD_OS_HANDOFF.md v1.1
+Pull request: PR #1
+is_final: false
+Roadmap version: v3.2 execution hardening, pending review
+Status: pending PM PR #1 review — do not treat as final until Sundar explicitly approves and merges PM PR #1
 Current phase model: Phase 0 Launch (W1) / Phase 1 Craft (W2-6) / Phase 2 Differentiator (W7-11) / Phase 3 Conversion (W12+)
 Weekly MVW: 3 applications / 1 learning unit / 1 LinkedIn or referral touch
 Green week: full schedule, roughly 8-10h if work is stable
