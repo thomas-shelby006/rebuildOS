@@ -3830,6 +3830,7 @@ If only 5 files can be active: `BRAIN_SNAPSHOT`, `00`, `41`, `11`, and `10`.
 | Sleep/wake drift | `core/35_SLEEP_ANCHOR_CORRECTION_PROTOCOL.md`, `core/22_ENERGY_DEBT_AND_AVOIDANCE_TAX.md` |
 | Technical/frontend blocker | `core/36_TECHNICAL_WORK_BLOCK_PROTOCOL.md`, `core/33_WORK_VISIBILITY_AND_COMMUNICATION_AVOIDANCE.md` |
 | PM transition | `core/32_PM_PROGRESSION_TRACKER.md`, `templates/PM_STAGE_CHECK.md`, `templates/PM_ROADMAP_INTAKE.md` when roadmap is provided |
+| Supplement routine | `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`, `templates/SUPPLEMENT_CHECKIN.md`, `REBUILD_OS_BRAIN.md` Section 36 — only after activation |
 | Gym/health restart | `core/37_GYM_RESTART_PROTOCOL.md`, `core/28_ENVIRONMENT_AND_FRICTION_DESIGN.md` |
 | Interview | `core/38_INTERVIEW_DAY_MODE.md`, `templates/INTERVIEW_DAY_CHECK.md` |
 | Transition/resignation/new job | `core/39_TRANSITION_MODE.md`, `core/32_PM_PROGRESSION_TRACKER.md` |
@@ -3856,7 +3857,7 @@ Reference/audit files are historical unless current core files are ambiguous.
 `templates/WORK_VISIBILITY_CHECK.md` and `templates/COMMUNICATION_REENTRY.md` are shorthand command views. The canonical rule is `core/33_WORK_VISIBILITY_AND_COMMUNICATION_AVOIDANCE.md`.
 
 ## First 7 real-use days
-The first 7 real-use days after v3.3 activation are calibration + feature freeze. Friction goes to System Notes unless a rule blocks today's action. Weekly review decides keep / simplify / remove.
+The first 7 real-use days after v3.3 activation are calibration + feature freeze. Friction goes to System Notes unless a rule blocks today's action. Weekly review decides keep / simplify / remove. Supplement routine remains inactive unless Sundar explicitly activates it.
 
 ## Final-use rule
 Do not load audit/history files during daily use. Do not propose new features before 7 days of use unless a rule blocks action.
