@@ -1,5 +1,5 @@
 # Weekly Review
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Default: minimum weekly review
 Target duration: 5 minutes. Use this unless Sundar asks for full review or there is a serious pattern to analyze.
@@ -141,6 +141,8 @@ After weekly review, update `BRAIN_SNAPSHOT.md` with:
 - next week's three non-negotiables
 - first action for next week/tomorrow
 - PM stage if changed
+- PM roadmap line if active
+- supplement line if active
 - preference confidence/export status if changed
 
 ## Streak review rule
@@ -150,7 +152,7 @@ Review only two streaks during the v2.6 test period:
 
 If either streak becomes a shame trigger, stop displaying streak numbers in normal check-ins and keep the behavior tracked silently.
 
-## Life signals synthesis (v3.3)
+## Life signals synthesis (v3.4)
 Synthesize the week's signals in a useful pattern summary, strict but non-shaming. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
 Required output:
@@ -179,14 +181,60 @@ Improvement or decline vs last week:
 
 If this is the first 7 days of v3.3 or data is sparse, say: `baseline forming`. Do not overclaim a trend from one week, inferred data, or missing data.
 
-## PM roadmap intake/accountability
-If Sundar provides a PM roadmap later, do not invent missing details. Ingest it as a structured accountability track:
-- roadmap phase
-- next milestone
-- weekly output target
-- blockers
-- missed item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+## Supplement routine review (if active)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`. Skip this block entirely until Sundar activates the routine.
 
-PM remains one important track, not the whole OS.
+```text
+Supplement routine review:
+- Phase:
+- Creatine days:
+- B12 days:
+- D3 done if due:
+- Whey/protein consistency:
+- Isabgol consistency:
+- Omega/magnesium consistency:
+- Side effects/cautions:
+- Phase progress:
+- Next adjustment:
+```
+
+Rules:
+- Week 8: switch B12 to 2–3x/week and D3 to once every 2 weeks.
+- Around 3 months: remind 25-OH Vitamin D retest if possible.
+- Foundation beats stack: sleep, sunlight, water, breakfast/protein still matter more than supplement completion.
+- No diagnosis, no product research, no moralizing, no supplement guilt.
+
+## PM roadmap review (if roadmap provided)
+Use this block when a PM roadmap is active or imported from `templates/PM_ROADMAP_INTAKE.md`.
+
+```text
+PM roadmap review:
+- Roadmap phase:
+- This week's PM target:
+- Applications sent:
+- Referrals/outreach:
+- Replies:
+- Recruiter screens:
+- HM rounds:
+- Product loops:
+- Final rounds:
+- PM prep outputs:
+- Artifact progress:
+- Funnel diagnosis:
+- One fix for next week:
+- Missed PM item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+- Next week capacity tier: Red / Yellow / Green
+```
+
+Rules:
+- Many applications but no replies → fix resume / positioning / referrals.
+- Screens but no HM rounds → fix story / role fit.
+- HM rounds but no product loops → fix product sense / domain.
+- PM rounds fail → fix product sense / metrics / prioritization / execution.
+- Job unstable → shrink PM target and protect work visibility.
+- Course watching alone does not count unless converted into output.
+- No blind carry-forward.
+- Score the week against the chosen capacity gear, not against Green by default.
+- PM remains one important track, not the whole OS.
 
 Then age the rolling window in `REBUILD_OS_BRAIN.md` Section 35: push the oldest detailed week into a weekly summary row; at month end, compress four weekly summaries into one monthly line. Keep the section bounded. No calories, no moralizing.

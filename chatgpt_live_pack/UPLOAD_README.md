@@ -1,65 +1,93 @@
 # ChatGPT Live Pack — Upload Guide
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
-This folder is the **upload-ready set** for running Rebuild OS inside a ChatGPT Project on ChatGPT Plus. ChatGPT Projects is the **primary daily environment**. GitHub/Kiro remains the **source / archive / builder**.
+This folder is the default upload-ready set for running Rebuild OS inside a ChatGPT Project. ChatGPT Projects is the daily environment. GitHub/Kiro remains the source/archive/builder.
 
-Filenames here are **flattened** (e.g., `core_41_ACTIVE_PREFERENCE_PROFILE.md`) because ChatGPT project uploads are a flat list with no folders. **Upload the files from this folder exactly as named.** The original repo paths are shown only for traceability.
+## Default upload strategy
 
-The bundles (`CORE_OPERATING_MANUAL.md`, `TEMPLATES_BUNDLE.md`) and the copied files are **generated artifacts** built by `build_chatgpt_pack.sh` (repo root) from the canonical sources. If a bundle/copy disagrees with its source, the **source wins**. Re-run the build after changing sources.
+Use one strategy at a time.
 
-## What to upload into the ChatGPT Project (10 files — use these flattened names as-is)
+Default strategy: upload the normal live pack files from this folder.
 
-| Upload this file (from `chatgpt_live_pack/`) | Source (traceability only) | Mutable? |
+Fallback strategy: upload `REBUILD_OS_ALL_IN_ONE.md` alone only if the normal live pack cannot be used.
+
+Do not upload both the normal live pack and the all-in-one fallback together unless explicitly troubleshooting. Duplicate knowledge can create stale or conflicting retrieval.
+
+## What to upload by default
+
+| Upload this file | Source | Mutable? |
 |---|---|---|
 | `BRAIN_SNAPSHOT.md` | `BRAIN_SNAPSHOT.md` | yes |
 | `REBUILD_OS_BRAIN.md` | `REBUILD_OS_BRAIN.md` | yes |
 | `core_41_ACTIVE_PREFERENCE_PROFILE.md` | `core/41_ACTIVE_PREFERENCE_PROFILE.md` | yes |
-| `core_40_PREFERENCE_FEEDBACK_LEDGER.md` | `core/40_PREFERENCE_FEEDBACK_LEDGER.md` | yes (if changed) |
+| `core_40_PREFERENCE_FEEDBACK_LEDGER.md` | `core/40_PREFERENCE_FEEDBACK_LEDGER.md` | yes, if changed |
 | `core_00_PROJECT_INSTRUCTIONS.md` | `core/00_PROJECT_INSTRUCTIONS.md` | no |
 | `core_21_FILE_LOADING_PRIORITY_GUIDE.md` | `core/21_FILE_LOADING_PRIORITY_GUIDE.md` | no |
 | `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md` | `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md` | no |
-| `CORE_OPERATING_MANUAL.md` | generated bundle of high-use core modules (incl. `core/44`) | no |
-| `TEMPLATES_BUNDLE.md` | generated bundle of high-use templates | no |
-| `REBUILD_OS_ALL_IN_ONE.md` | `REBUILD_OS_ALL_IN_ONE.md` (full reference fallback; live files win) | no |
+| `CORE_OPERATING_MANUAL.md` | generated bundle | no |
+| `TEMPLATES_BUNDLE.md` | generated bundle | no |
 
-This is well under the ChatGPT Plus per-project file cap (~20), leaving headroom.
+`REBUILD_OS_ALL_IN_ONE.md` stays in this folder for fallback/recovery, but it is not part of the default upload set.
 
 ## Project Instructions field
 
-Paste the content of `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md` into the Project's **Instructions** field (keep it concise; full detail lives in the uploaded `core_00_PROJECT_INSTRUCTIONS.md`).
+Paste `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md` into the Project Instructions field. Keep full behavior in uploaded files, not only in the instruction box.
 
-## Startup sanity test
+## Startup smoke test
 
 After setup, send a short morning test message. Expected behavior:
 - infer morning mode from India time;
 - ask current capacity;
-- include one light routine anchor if relevant;
+- include one light routine/food anchor if relevant;
 - ask a scheduled check only if due;
 - avoid a long intake form.
 
-If the response is too long, say: `Use Rebuild OS minimum startup. Main need first. One proactive signal question max.`
+If the response is too long, say: `Use Rebuild OS minimum mode. Main need first. One proactive signal question max.`
 
-## Mutable files — re-upload when they change
+## Night smoke test
 
-ChatGPT cannot rewrite uploaded files automatically; persistence is **manual re-upload**. After a night/weekly review or preference consolidation, re-upload whichever changed, using the flattened names:
+Send a rough day summary. Expected behavior:
+- accept natural language;
+- classify one missed item;
+- update snapshot/brain fields;
+- ask no more than two signal questions;
+- avoid a report-card tone.
 
-- `BRAIN_SNAPSHOT.md` (← `BRAIN_SNAPSHOT.md`)
-- `REBUILD_OS_BRAIN.md` (← `REBUILD_OS_BRAIN.md`)
-- `core_41_ACTIVE_PREFERENCE_PROFILE.md` (← `core/41_ACTIVE_PREFERENCE_PROFILE.md`)
-- `core_40_PREFERENCE_FEEDBACK_LEDGER.md` (← `core/40_PREFERENCE_FEEDBACK_LEDGER.md`, only if changed)
+## Importing the PM roadmap
 
-## Notes
+Paste/link the PM transition plan repo or `PM_REBUILD_OS_HANDOFF.md` into the ChatGPT Project. Rebuild OS records it through `templates/PM_ROADMAP_INTAKE.md`, writes the current roadmap state into `REBUILD_OS_BRAIN.md` Section 23, and reviews it weekly.
 
-- The repo ZIP (`rebuild_os_github_ready_repo.zip`) is **archive only** — not ChatGPT Project knowledge (ZIPs are not indexed as knowledge).
-- **Tasks/reminders are nudges only**, not the data store. Life signals live in `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 35.
-- Life Signals: scheduled checks are limited, in-chat checks are light, and Red days stay light.
-- First 7 days of v3.3 are calibration, not judgment. If data is sparse, weekly review should say `baseline forming` and avoid confident trend claims.
+PM remains one track, not the whole OS. If current job stability is at risk, PM shrinks to the minimum viable week instead of taking over.
 
-## Regenerating this pack
+## Supplement routine tracking
 
-From the repo root:
+Supplement tracking is included through the generated bundles after regeneration: `CORE_OPERATING_MANUAL.md` includes `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`, and `TEMPLATES_BUNDLE.md` includes `templates/SUPPLEMENT_CHECKIN.md`.
+
+No extra default upload file is needed. The routine stays inactive until Sundar says `Activate supplement routine` inside chat.
+
+## Mutable files
+
+After night/weekly review or preference consolidation, re-upload changed mutable files:
+- `BRAIN_SNAPSHOT.md`
+- `REBUILD_OS_BRAIN.md`
+- `core_41_ACTIVE_PREFERENCE_PROFILE.md`
+- `core_40_PREFERENCE_FEEDBACK_LEDGER.md`, only if changed
+
+## Privacy and data control
+
+- Keep the repo private.
+- Do not paste public links to brain/snapshot files.
+- Avoid unnecessary raw identifiers in brain files.
+- Review ChatGPT data controls before using this as a personal life system.
+- Keep sensitive detail compact and useful, not exhaustive.
+
+## Regeneration
+
+Generated files are artifacts. Source files win if there is a conflict.
+
+From repo root:
 
 ```bash
-bash build_all_in_one.sh    # regenerate REBUILD_OS_ALL_IN_ONE.md from canonical v3.3 files
-bash build_chatgpt_pack.sh  # rebuild bundles + refresh the flattened copies in this folder
+bash build_all_in_one.sh
+bash build_chatgpt_pack.sh
 ```

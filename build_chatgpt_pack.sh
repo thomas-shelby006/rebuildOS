@@ -11,6 +11,7 @@ mkdir -p "$PACK"
 # --- Core operating manual bundle (high-use core modules, Life Signals first) ---
 CORE_FILES=(
   core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md
+  core/45_SUPPLEMENT_ROUTINE_TRACKING.md
   core/10_ADAPTIVE_DAY_ENGINE.md
   core/11_STATE_ROUTER_AND_MODE_SWITCH.md
   core/06_COMMITMENT_LEDGER.md
@@ -26,7 +27,7 @@ CORE_FILES=(
 )
 
 {
-  echo "# Core Operating Manual — Rebuild OS v3.3 Life Signals"
+  echo "# Core Operating Manual — Rebuild OS v3.4 Coherence and Deployment Hardening"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical core/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
@@ -51,6 +52,8 @@ TEMPLATE_FILES=(
   templates/MIDDAY_ANCHOR_CHECK.md
   templates/NIGHT_REVIEW.md
   templates/WEEKLY_REVIEW.md
+  templates/PM_ROADMAP_INTAKE.md
+  templates/SUPPLEMENT_CHECKIN.md
   templates/STUCK_CHECKIN.md
   templates/REENTRY_AFTER_WASTED_TIME.md
   templates/TIMESHEET_ANCHOR_CHECK.md
@@ -61,7 +64,7 @@ TEMPLATE_FILES=(
 )
 
 {
-  echo "# Templates Bundle — Rebuild OS v3.3 Life Signals"
+  echo "# Templates Bundle — Rebuild OS v3.4 Coherence and Deployment Hardening"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical templates/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."

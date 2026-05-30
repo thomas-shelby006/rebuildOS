@@ -1,4 +1,4 @@
-# Templates Bundle — Rebuild OS v3.3 Life Signals
+# Templates Bundle — Rebuild OS v3.4 Coherence and Deployment Hardening
 
 > GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical templates/ files.
 > Do not edit here; edit the source files and rebuild. Source files win on conflict.
@@ -22,8 +22,21 @@ log: walked 20 min
 
 ## What to do
 1. Acknowledge in one short line.
-2. Fold the signal into the `BRAIN_SNAPSHOT.md` `Signals:` line (today only) and, at night review, into the `REBUILD_OS_BRAIN.md` Section 35 current-week row.
-3. Continue the real task. Do not open a tracking dialogue.
+2. Mark each signal as confirmed, inferred `(inf)`, or missing. Never present guesses as fact.
+3. Fold the signal into the `BRAIN_SNAPSHOT.md` `Signals:` line (today only) and, at night review, into the `REBUILD_OS_BRAIN.md` Section 35 current-week row.
+4. Continue the real task. Do not open a tracking dialogue.
+
+## Minimum viable tracking mode
+On low-capacity days, accept only:
+
+```text
+Sleep:
+Meals:
+Mood-energy:
+One action:
+```
+
+No extra detail is required. Partial input is valid.
 
 ## Compact fields (fill only what was given)
 ```text
@@ -33,14 +46,21 @@ Meals (B/L/D + rough quality; skips/reasons):
 Movement (walk/gym/steps):
 Mood/energy (1-3) + shame flag:
 Weight (only if M/W/F and checked):
-Day quality (word or 1-3):
+Day quality (bad/rough/okay/good/strong + optional reason):
 Drift/avoidance:
+Confidence: confirmed / inferred / missing
 Note (e.g., "skipped lunch, busy"):
 ```
 
+## Ask budget
+- Max 1 proactive signal question per normal check-in.
+- Red day = 0 extra signal questions.
+- Main need first: if Sundar came with a work/coding/emotional/urgent issue, solve that before tracking.
+
 ## Rules
 - No calories, no macros, no food/weight moralizing, no medical/fitness diagnosis.
-- One word for quality is enough (skipped / light / ok / heavy / nourishing).
+- One word for meal quality is enough (skipped / light / ok / heavy / nourishing).
+- Day quality uses bad / rough / okay / good / strong.
 - Red days: capture only what Sundar volunteers; ask nothing extra.
 - Never build an append-only raw log. Snapshot holds today; brain holds the bounded rolling window.
 
@@ -79,7 +99,7 @@ Write to `REBUILD_OS_BRAIN.md` Section 35 (current-week row + update "Last weigh
 <!-- ===== BEGIN templates/MORNING_CHECKIN.md ===== -->
 
 # Morning Check-in
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Default: natural-language entry
 Do not force a form. Sundar can start with one rough sentence.
@@ -181,15 +201,15 @@ Reminder/check-in needed:
 ## Sleep anchor check
 If wake/sleep drift is repeated, reference `core/35_SLEEP_ANCHOR_CORRECTION_PROTOCOL.md` instead of only logging energy debt.
 
-
-## Life signals (v3.3, light — not a form)
+## Life signals (v3.4, light — not a form)
 Companion behavior; keep it light. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
 - Be time-aware (Asia/Kolkata): if Sundar just says "hi" in the morning and startup hasn't happened, offer the morning start once. Do not wait to be told "morning check-in".
 - If today is Monday/Wednesday/Friday and weight is not logged, ask once: `Weight today? (skip is fine)`. Trend only — no judgement, no target, no comment on a single reading.
 - On Yellow/Green mornings, if breakfast is not logged, ask one light line once ("had breakfast yet?"). Accept "skipped". This in-chat meal check is active by default (external meal reminders remain optional). Skip on Red.
-- Capture any volunteered signals (sleep, breakfast, mood/energy) into the snapshot `Signals:` line. Do not ask a list of questions.
-- Red morning: skip weight and meal asks entirely. Sleep + first action only.
+- If supplement routine is active: ask one compact line only when context allows — `Oats+whey planned/done? Creatine+B12? D3 due today with fatty meal?` Skip on Red and never ask before activation.
+- Capture any volunteered signals (sleep, breakfast, mood/energy, supplement log if active) into the snapshot. Do not ask a list of questions.
+- Red morning: skip weight, meal, and supplement asks entirely. Sleep + first action only.
 
 <!-- ===== END templates/MORNING_CHECKIN.md ===== -->
 
@@ -297,7 +317,7 @@ Report back:
 <!-- ===== BEGIN templates/NIGHT_REVIEW.md ===== -->
 
 # Night Review
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Target duration
 Default: 3–5 minutes. Full review is optional and mainly for Green days or weekly-review prep.
@@ -323,6 +343,18 @@ System feedback optional: anything about today's Rebuild OS interaction that wor
 ```
 
 That is enough to run the review. The assistant should infer the rest from today’s conversation and the brain. Ask only for a missing item if it blocks tomorrow’s plan or a serious commitment decision.
+
+## Minimum viable tracking mode
+If capacity is low, accept only:
+
+```text
+Sleep:
+Meals:
+Mood-energy:
+One action:
+```
+
+No extra detail is required. Do not force completion.
 
 ## Full optional input
 Use only if Sundar asks for full review, has Green capacity, or is preparing for weekly review.
@@ -402,6 +434,7 @@ Brain updates made: REBUILD_OS_BRAIN Last updated + BRAIN_SNAPSHOT minimum curre
 ## Rule
 Night review is not a trial. It is ledger update + pattern detection + tomorrow setup. If the review itself feels heavy, run the default short form and stop.
 
+Ask budget: max 2 signal questions in night review. Red night = 0 extra signal questions. If Sundar opens with a serious issue, solve that first and defer review.
 
 ## Optional system feedback field
 Use this when anything about Rebuild OS itself worked or felt wrong today:
@@ -411,7 +444,6 @@ Preference signals this session: [too heavy / worked / be stricter / skip this /
 ```
 
 If a real preference signal appears, capture it into `core/40_PREFERENCE_FEEDBACK_LEDGER.md` using the PF format. Do not consolidate at night unless Sundar explicitly asks and no important action is pending.
-
 
 ## Preference capture check
 If a PF block was produced today, ask: `Captured preference signals to append?` Append it to the ledger before ending night review.
@@ -431,7 +463,7 @@ For normal nights, `What I produced` matters more than passive learning.
 Every completed night review, even the Red minimum version, must update:
 - `REBUILD_OS_BRAIN.md` Last updated
 - `BRAIN_SNAPSHOT.md` Last updated
-- snapshot Minimum current state: current capacity, last session outcome, active commitments, tomorrow/next first action, biggest risk, sleep anchor, timesheet/status, PM stage if relevant, active preference confidence if changed
+- snapshot Minimum current state: current capacity, last session outcome, active commitments, tomorrow/next first action, biggest risk, sleep anchor, timesheet/status, PM stage if relevant, supplement line if active, active preference confidence if changed
 
 Do not just write `Brain updated: yes`. State whether the snapshot was updated fully or partially.
 
@@ -441,7 +473,6 @@ If capacity allows, end with:
 System note optional: anything felt off/helpful to change next time?
 ```
 Skip this on Red nights unless Sundar already raised a system issue.
-
 
 ## Recovery streak update rule
 Track only two test streaks for now:
@@ -454,11 +485,13 @@ On Yellow/Green nights, update them automatically:
 
 On Red nights, do not emphasize streaks. If needed, update quietly in the brain/snapshot without making it a shame signal.
 
-
-## Life signals writeback (v3.3)
+## Life signals writeback (v3.4)
 At night review, capture today's compact signals, write one row to `REBUILD_OS_BRAIN.md` Section 35 current-week table, and refresh the `BRAIN_SNAPSHOT.md` `Signals:` line. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
-Capture only what is known — do not interrogate:
+Capture only what is known. Do not interrogate. Mark confidence:
+- confirmed = Sundar said it
+- inferred = mark `(inf)`
+- missing = leave blank / missing
 
 ```text
 Date/day:
@@ -470,9 +503,23 @@ Mood/energy (1-3) + shame flag if present:
 Weight (only if M/W/F and checked):
 Hygiene/basic routine (when relevant; teeth/bath/clothes/room):
 Drift/avoidance:
+Confidence mix: confirmed / inferred / missing
 ```
 
-Rules: no calories, no food/weight moralizing. If dinner is not yet logged on a Yellow/Green evening, ask once before closing. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
+## Supplement routine writeback (only if active)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`.
+
+Ask compactly only if within ask budget. Red night: capture only what Sundar volunteered.
+
+```text
+Supplements: morning stack __ / isabgol __ (gap ok?) / omega __ / magnesium __ / D3 if due __ / side effects __
+```
+
+Update `BRAIN_SNAPSHOT.md` Supplements line and `REBUILD_OS_BRAIN.md` Section 36 when active.
+
+Rules: no diagnosis, no product research, no double dosing advice, no supplement interrogation. If side effects or risk signals appear, advise doctor/lab per `core/45`.
+
+Life signal rules: no calories, no food/weight moralizing. If dinner is not yet logged on a Yellow/Green evening, ask once before closing only if within ask budget and not interrupting the main need. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
 
 <!-- ===== END templates/NIGHT_REVIEW.md ===== -->
 
@@ -480,7 +527,7 @@ Rules: no calories, no food/weight moralizing. If dinner is not yet logged on a 
 <!-- ===== BEGIN templates/WEEKLY_REVIEW.md ===== -->
 
 # Weekly Review
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Default: minimum weekly review
 Target duration: 5 minutes. Use this unless Sundar asks for full review or there is a serious pattern to analyze.
@@ -574,7 +621,6 @@ If the week improved, preserve the system and add only one expansion.
 ## Bad week rule
 If the week was unstable, reduce scope and fix one anchor.
 
-
 ## Preference consolidation and export step
 Run this if there are raw preference feedback entries, held preferences needing review, or Sundar asks for it.
 
@@ -616,7 +662,6 @@ Replace core/40_PREFERENCE_FEEDBACK_LEDGER.md with this content:
 
 Use `templates/PREFERENCE_CONSOLIDATION.md` and `templates/PREFERENCE_EXPORT.md` for exact formatting. Weekly review must not finish a successful preference consolidation without offering export blocks.
 
-
 ## Snapshot writeback after weekly review
 After weekly review, update `BRAIN_SNAPSHOT.md` with:
 - last session outcome: weekly review completed + key pattern
@@ -624,6 +669,8 @@ After weekly review, update `BRAIN_SNAPSHOT.md` with:
 - next week's three non-negotiables
 - first action for next week/tomorrow
 - PM stage if changed
+- PM roadmap line if active
+- supplement line if active
 - preference confidence/export status if changed
 
 ## Streak review rule
@@ -633,10 +680,22 @@ Review only two streaks during the v2.6 test period:
 
 If either streak becomes a shame trigger, stop displaying streak numbers in normal check-ins and keep the behavior tracked silently.
 
+## Life signals synthesis (v3.4)
+Synthesize the week's signals in a useful pattern summary, strict but non-shaming. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
-## Life signals synthesis (v3.3)
-Synthesize the week's signals in 3–5 lines, strict but non-shaming. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+Required output:
+```text
+Life Signals weekly pattern summary:
+- 3 wins:
+- 3 misses:
+- 2 patterns detected:
+- 1 likely correlation:
+- 1 adjustment for next week:
+- 1 thing to stop tracking if not useful:
+- Confidence: confirmed / inferred / missing mix
+```
 
+Also include:
 ```text
 Sleep trend:
 Meal regularity (skips/late):
@@ -645,20 +704,214 @@ Movement count:
 Mood/energy trend:
 Weight direction (4-week, not a single reading):
 Drift pattern:
-One honest correlation (e.g., rough sleep + skipped breakfast = low energy):
 Improvement or decline vs last week:
-One small adjustment for next week:
 ```
+
+If this is the first 7 days of v3.3 or data is sparse, say: `baseline forming`. Do not overclaim a trend from one week, inferred data, or missing data.
+
+## Supplement routine review (if active)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`. Skip this block entirely until Sundar activates the routine.
+
+```text
+Supplement routine review:
+- Phase:
+- Creatine days:
+- B12 days:
+- D3 done if due:
+- Whey/protein consistency:
+- Isabgol consistency:
+- Omega/magnesium consistency:
+- Side effects/cautions:
+- Phase progress:
+- Next adjustment:
+```
+
+Rules:
+- Week 8: switch B12 to 2–3x/week and D3 to once every 2 weeks.
+- Around 3 months: remind 25-OH Vitamin D retest if possible.
+- Foundation beats stack: sleep, sunlight, water, breakfast/protein still matter more than supplement completion.
+- No diagnosis, no product research, no moralizing, no supplement guilt.
+
+## PM roadmap review (if roadmap provided)
+Use this block when a PM roadmap is active or imported from `templates/PM_ROADMAP_INTAKE.md`.
+
+```text
+PM roadmap review:
+- Roadmap phase:
+- This week's PM target:
+- Applications sent:
+- Referrals/outreach:
+- Replies:
+- Recruiter screens:
+- HM rounds:
+- Product loops:
+- Final rounds:
+- PM prep outputs:
+- Artifact progress:
+- Funnel diagnosis:
+- One fix for next week:
+- Missed PM item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+- Next week capacity tier: Red / Yellow / Green
+```
+
+Rules:
+- Many applications but no replies → fix resume / positioning / referrals.
+- Screens but no HM rounds → fix story / role fit.
+- HM rounds but no product loops → fix product sense / domain.
+- PM rounds fail → fix product sense / metrics / prioritization / execution.
+- Job unstable → shrink PM target and protect work visibility.
+- Course watching alone does not count unless converted into output.
+- No blind carry-forward.
+- Score the week against the chosen capacity gear, not against Green by default.
+- PM remains one important track, not the whole OS.
 
 Then age the rolling window in `REBUILD_OS_BRAIN.md` Section 35: push the oldest detailed week into a weekly summary row; at month end, compress four weekly summaries into one monthly line. Keep the section bounded. No calories, no moralizing.
 
 <!-- ===== END templates/WEEKLY_REVIEW.md ===== -->
 
 
+<!-- ===== BEGIN templates/PM_ROADMAP_INTAKE.md ===== -->
+
+# PM Roadmap Intake
+Version: v3.4
+
+Use this when Sundar provides or links his PM transition roadmap. Do not invent roadmap content. PM remains one important track, not the whole OS.
+
+## Intake fields
+
+```text
+Roadmap source repo/branch/commit/date:
+Roadmap version:
+Status: approved / pending review / draft
+Current phase:
+Next milestone:
+Weekly minimum (MVW):
+Capacity-tier weekly versions: Green / Yellow / Red
+Application target:
+Referral/outreach target:
+Interview-prep output target:
+AI artifact milestone:
+Funnel metrics:
+Funnel thresholds:
+Dream-company sequencing rule:
+Current-job stability guardrail:
+Missed item classification:
+```
+
+## Example from PM transition plan handoff
+
+```text
+Roadmap source: thomas-shelby006/pm-transition-plan
+Branch: pm-plan-v3-2-execution-hardening
+Handoff head: cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b
+Handoff file: PM_REBUILD_OS_HANDOFF.md v1.1
+Pull request: PR #1
+is_final: false
+Roadmap version: v3.2 execution hardening, pending review
+Status: pending PM PR #1 review — do not treat as final until Sundar explicitly approves and merges PM PR #1
+Current phase model: Phase 0 Launch (W1) / Phase 1 Craft (W2-6) / Phase 2 Differentiator (W7-11) / Phase 3 Conversion (W12+)
+Weekly MVW: 3 applications / 1 learning unit / 1 LinkedIn or referral touch
+Green week: full schedule, roughly 8-10h if work is stable
+Yellow week: applications target + 1 artifact touch + 1 mock; reduce new study
+Red week: MVW only; protect the job; no guilt
+Funnel metrics: apps -> responses -> recruiter screens -> HM rounds -> product loops -> final rounds -> offers
+Dream-company rule: reserve Tier-1 referrals until W7+ and stronger positioning/artifact readiness
+Job guardrail: current job stability is absolute #1; PM uses leftover capacity only
+Missed item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+```
+
+## Accountability rules
+
+- PM remains one important track, not the whole OS.
+- Missed roadmap items are classified as: carry forward / reschedule / shrink / cancel / revise roadmap.
+- Repeated misses trigger realistic roadmap adjustment, not blind carry-forward.
+- Count only real evidence of progress.
+- Course watching alone is not progress unless converted into notes, answer, artifact, application, outreach, or interview output.
+- Protect work stability and the daily floor before adding PM load.
+- If current job stability is at risk, shrink PM to MVW instead of erasing it.
+
+## Brain writeback
+
+Update `REBUILD_OS_BRAIN.md` Section 23 after intake or weekly review.
+
+<!-- ===== END templates/PM_ROADMAP_INTAKE.md ===== -->
+
+
+<!-- ===== BEGIN templates/SUPPLEMENT_CHECKIN.md ===== -->
+
+# Supplement Check-in
+Version: v3.4 Pre-Deployment Add-on
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`
+
+Use only after Sundar explicitly says: `Activate supplement routine.`
+
+This is passive capture and light prompting, not a medical form. Do not diagnose, prescribe, or reopen product research.
+
+## Casual capture
+Accept natural logs:
+
+```text
+log: oats whey banana milk done, creatine + B12 done
+log: isabgol done 3pm
+log: omega with dinner
+log: magnesium taken
+log: D3 taken with curd
+```
+
+Acknowledge briefly, fold into `BRAIN_SNAPSHOT.md` Supplements line and `REBUILD_OS_BRAIN.md` Supplement Routine section, and continue.
+
+## Compact prompts by time
+
+### Morning / first meal
+Ask only if active and relevant:
+
+```text
+Oats+whey planned/done? Creatine + B12? D3 due today with fatty meal?
+```
+
+### Mid-afternoon
+Ask only if relevant:
+
+```text
+Isabgol done, at least 2 hours away from pills/supplements, with enough water?
+```
+
+### Dinner
+Ask only if relevant:
+
+```text
+Omega-3 with food?
+```
+
+### Night
+Ask compactly:
+
+```text
+Morning stack __ / isabgol __ gap ok? / omega __ / magnesium __ / D3 if due __ / side effects __
+```
+
+## Red/overwhelmed mode
+Use priority only:
+
+```text
+D3 if due > B12 > creatine > whey/protein breakfast > isabgol > omega-3 > magnesium.
+```
+
+Do not interrogate. Capture only what Sundar volunteers.
+
+## Safety response
+If Sundar reports D3 danger symptoms, medication interactions, surgery, kidney/liver concerns, abnormal labs, fish allergy/bleeding concerns, or uncertainty around high-dose supplementation, stop routine optimization and advise doctor/lab consultation.
+
+## Missed dose rule
+Never double doses. If missed, continue the next day unless core/45 says same-day timing still makes sense.
+
+<!-- ===== END templates/SUPPLEMENT_CHECKIN.md ===== -->
+
+
 <!-- ===== BEGIN templates/STUCK_CHECKIN.md ===== -->
 
 # Stuck Check-in
-Version: v3.2 Deployment Ready
+Version: v3.3 Life Signals
 
 ## Natural entry
 Say anything like:
@@ -666,6 +919,11 @@ Say anything like:
 ```text
 I'm stuck. I should work but I'm watching YouTube.
 ```
+
+## Main-need-first rule
+If Sundar opens with a work issue, coding/debugging issue, urgent decision, or emotional issue, handle that first. Do not derail into tracking.
+
+After the immediate stuck point is handled, optionally capture one tiny signal only if useful and within ask budget. Example: `I’ll help with the task first. Later, remind me to log lunch if needed.`
 
 ## Router fields, only if needed
 
@@ -675,6 +933,11 @@ Current capacity: Red / Yellow / Green
 What was I supposed to do?
 What am I doing instead?
 ```
+
+## Life Signals note
+- Ask budget: max 1 proactive signal question in a normal check-in.
+- Red day: 0 extra signal questions.
+- Mark any captured signal as confirmed / inferred `(inf)` / missing.
 
 ## Output
 

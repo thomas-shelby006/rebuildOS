@@ -1,5 +1,5 @@
 # Rebuild OS Brain
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 Last updated: not initialized — set real date/time at first night review, weekly review, or explicit brain update
 
 This is the live brain for Rebuild OS. It should be updated during night review, weekly review, or explicit update moments. It is designed to survive long-chat resets.
@@ -106,7 +106,9 @@ Rebuild OS v3.2 Deployment Ready freezes the current feature set for first real 
 
 No new feature additions before 7 days of real use unless a rule blocks today's action.
 
-Rebuild OS v3.3 Life Signals adds, at Sundar's explicit request, active life-signal tracking and time-aware companion behavior: sleep, meals/food quality, weight (M/W/F), mood/energy/day-quality, movement, hygiene-when-relevant, work visibility, PM, and drift — stored as a bounded rolling window (detailed current week → summarized recent weeks → compressed older months). Canonical rules live in `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. Tone/safety/preference rules are unchanged; Red days stay light; no calories, no moralizing, no therapist/romantic framing.
+Rebuild OS v3.3 Life Signals adds active life-signal tracking and time-aware companion behavior: sleep, meals/food quality, weight (M/W/F), mood/energy/day-quality, movement, hygiene-when-relevant, work visibility, PM, and drift — stored as a bounded rolling window. Canonical rules live in `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
+
+Rebuild OS v3.4 hardening clarifies source-of-truth rules, ChatGPT upload strategy, finalize-before-merge workflow, first-use calibration, PM roadmap intake, PM funnel accountability, and dormant-until-activated supplement routine tracking.
 
 ## 20. Work Visibility and Communication
 - Daily visible work signal:
@@ -135,10 +137,17 @@ Rebuild OS v3.3 Life Signals adds, at Sundar's explicit request, active life-sig
 - This week’s PM minimum:
 - What moved the stage forward:
 - PM roadmap provided?: no
-- PM roadmap source/date:
+- PM roadmap source/date/commit:
 - PM roadmap current phase:
 - PM roadmap next milestone:
-- Roadmap miss handling rule: classify as carry forward / reschedule / shrink / cancel / revise roadmap. Never fake progress or invent deliverables. PM remains one important track, not the whole OS.
+- PM weekly minimum:
+- PM capacity tier this week:
+- Applications/referrals/interviews funnel snapshot:
+- Last PM artifact shipped:
+- Current PM blocker:
+- Last funnel diagnosis:
+- Roadmap miss handling: carry forward / reschedule / shrink / cancel / revise roadmap; repeated misses revise realistically; no blind carry-forward.
+- Job-stability guardrail: current job visibility and daily floor outrank PM volume. If job is at risk, PM shrinks to MVW, not zero.
 
 ## 24. Ledger Cleanup / Archive Notes
 - Active commitment count:
@@ -225,7 +234,7 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 
 ### Tracking preferences
 - Active? yes
-- Domains on: sleep, meals, weight (M/W/F), mood/energy, movement, day-quality, drift, work visibility, PM
+- Domains on: sleep, meals, weight (M/W/F), mood/energy, movement, day-quality, drift, work visibility, PM, supplements-if-activated
 - Opted-out domains: none yet
 - No calories/macros. No food/weight moralizing. Red days exempt.
 
@@ -241,26 +250,26 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Usual mood/energy band: not yet established
 
 ### Current week — daily rows (most detail)
-| Date / day | Day quality (bad/rough/okay/good/strong) | Sleep (sleep→wake / qual) | Meals (B/L/D + quality) | Movement | Mood/Energy | Weight (M/W/F) | Drift | Confidence | Note (incl. hygiene when relevant) |
+| Date / day | Day quality | Sleep | Meals | Movement | Mood/Energy | Weight | Drift | Confidence | Note |
 |---|---|---|---|---|---|---|---|---|---|
 | | | | | | | | | | |
 
-### Last 4 weeks — weekly summaries (trend, not per-day)
+### Last 4 weeks — weekly summaries
 | Week of | Sleep consistency | Meal regularity | Movement count | Mood/energy trend | Weight direction | Work-visibility | Drift | One pattern | Confidence |
 |---|---|---|---|---|---|---|---|---|---|
 | | | | | | | | | | |
 
-### Older months — compressed summaries (one line each)
+### Older months — compressed summaries
 - _None yet._
 
 ### Trends and known correlations/patterns
 - Sleep trend:
 - Meal regularity trend:
-- Day-quality trend (bad/rough/okay/good/strong distribution):
+- Day-quality trend:
 - Mood/energy trend:
-- Weight direction (4-week):
+- Weight direction:
 - Drift pattern trend:
-- Hygiene/basic-routine notes (when relevant; e.g., low-zone days):
+- Hygiene/basic-routine notes:
 - Known correlations:
 - Detected recurring patterns to watch:
 - Weekly output format: 3 wins / 3 misses / 2 patterns / 1 likely correlation / 1 next-week adjustment / 1 thing to stop tracking if not useful.
@@ -269,5 +278,43 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Last weight check date:
 - Next weight check due: next Monday / Wednesday / Friday morning
 
-## 36. Handoff Summary
-Rebuild OS is a therapy-informed self-coaching and life-management system. It supports one long chat plus this live brain as handoff. It tracks commitments, capacity, sleep debt, avoidance patterns, weekly targets, reminders, experiments, environment rules, work visibility, sleep anchors, technical blockers, gym restart, interview mode, system notes, PM-roadmap accountability when provided, and daily life signals (sleep, meals, weight, mood/energy, movement, drift) stored as a bounded rolling window. It is strict but non-shaming, a steady companion but never a therapist or romantic partner. Current priority is rebuilding day-to-day reliability while keeping PM transition as one important track.
+## 36. Supplement Routine (rolling)
+Canonical rules: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`. Dormant until Sundar explicitly says `Activate supplement routine`.
+
+### Activation
+- Active? no
+- Supplement routine start date:
+- Products arrived? unknown
+- Current phase: inactive / Week 1 ramp / Weeks 2–8 correction / Maintenance
+- Fixed D3 day:
+- D3 first dose date:
+- B12 daily start date:
+- Creatine daily start date:
+- Isabgol start date:
+- 3-month Vitamin D retest reminder date:
+
+### Current week — compact tracking
+| Date | Morning stack | Isabgol + gap | Omega-3 | Magnesium | D3 if due | Water/protein note | Side effects/cautions |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
+### Weekly summary
+- Creatine days:
+- B12 days:
+- Whey/protein consistency:
+- Isabgol consistency:
+- Omega-3 consistency:
+- Magnesium consistency:
+- D3 done if due:
+- Side effects/cautions:
+- Phase progress:
+- Next adjustment:
+
+### Safety notes
+- No diagnosis. No new supplement suggestions unless Sundar explicitly asks.
+- D3 60K weekly during correction, never daily; never double.
+- Isabgol must stay 2 hours away from pills/supplements/medicines.
+- If risk symptoms/interactions/lab concerns appear, advise doctor/lab.
+
+## 37. Handoff Summary
+Rebuild OS is a self-coaching and life-management system. It supports one long chat plus this live brain as handoff. It tracks commitments, capacity, sleep debt, avoidance patterns, weekly targets, reminders, experiments, environment rules, work visibility, sleep anchors, technical blockers, gym restart, interview mode, system notes, PM-roadmap accountability when provided, supplement routine tracking when activated, and daily life signals stored as a bounded rolling window. It is strict but non-shaming, a steady companion but never a therapist or romantic partner. Current priority is rebuilding day-to-day reliability while keeping PM transition as one important track.
