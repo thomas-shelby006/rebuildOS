@@ -3165,7 +3165,7 @@ Response:
 <!-- ===== BEGIN core/16_REMINDERS_AND_CHECKINS.md ===== -->
 
 # Reminders and Check-ins
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Purpose
 Rebuild OS is primarily a conversational system, but serious commitments need external triggers. A plan inside chat is not enough for time-sensitive or repeated-miss items.
@@ -3256,14 +3256,26 @@ If a reminder is ignored twice, do not add more reminders. Diagnose:
 ## Do not spam
 A reminder system that creates noise will be ignored. Use fewer, stronger reminders.
 
-
-## Life signals reminders (v3.3)
+## Life signals reminders (v3.4)
 Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. Reminders are nudges only — the brain/snapshot hold the data, not the reminder.
 
 - Weight check: Monday / Wednesday / Friday morning. One short, skippable nudge. Do not remind on other days. Do not remind on Red mornings.
 - Meal windows — two layers: **in-chat** time-aware meal checks are **active by default on Yellow/Green** (see `core/44` and the check-in templates); **external** scheduled meal reminders (calendar/phone/Tasks) are **optional/opt-in**, off by default. One ask per window; never nag; never on Red days.
 - Keep it gentle and opt-in. If ignored twice, reduce or pause — do not escalate.
 - Tasks/reminders never store life data; they only prompt. Signals live in `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 35.
+
+## Supplement routine reminders (optional, only after activation)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`.
+
+Do not create supplement reminders before Sundar says `Activate supplement routine`. Do not create D3 reminders until Sundar chooses a fixed D3 day.
+
+Allowed reminders after activation:
+- D3 weekly on chosen day.
+- Morning stack: oats/whey + creatine + B12.
+- Mid-afternoon isabgol with water and 2-hour gap.
+- Night magnesium.
+
+Do not overload the first-week reminder set. If supplement reminders create noise, keep only D3 weekly and morning stack.
 
 <!-- ===== END core/16_REMINDERS_AND_CHECKINS.md ===== -->
 
