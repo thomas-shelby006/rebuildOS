@@ -1,5 +1,5 @@
 # Night Review
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Target duration
 Default: 3–5 minutes. Full review is optional and mainly for Green days or weekly-review prep.
@@ -145,7 +145,7 @@ For normal nights, `What I produced` matters more than passive learning.
 Every completed night review, even the Red minimum version, must update:
 - `REBUILD_OS_BRAIN.md` Last updated
 - `BRAIN_SNAPSHOT.md` Last updated
-- snapshot Minimum current state: current capacity, last session outcome, active commitments, tomorrow/next first action, biggest risk, sleep anchor, timesheet/status, PM stage if relevant, active preference confidence if changed
+- snapshot Minimum current state: current capacity, last session outcome, active commitments, tomorrow/next first action, biggest risk, sleep anchor, timesheet/status, PM stage if relevant, supplement line if active, active preference confidence if changed
 
 Do not just write `Brain updated: yes`. State whether the snapshot was updated fully or partially.
 
@@ -167,7 +167,7 @@ On Yellow/Green nights, update them automatically:
 
 On Red nights, do not emphasize streaks. If needed, update quietly in the brain/snapshot without making it a shame signal.
 
-## Life signals writeback (v3.3)
+## Life signals writeback (v3.4)
 At night review, capture today's compact signals, write one row to `REBUILD_OS_BRAIN.md` Section 35 current-week table, and refresh the `BRAIN_SNAPSHOT.md` `Signals:` line. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
 Capture only what is known. Do not interrogate. Mark confidence:
@@ -188,4 +188,17 @@ Drift/avoidance:
 Confidence mix: confirmed / inferred / missing
 ```
 
-Rules: no calories, no food/weight moralizing. If dinner is not yet logged on a Yellow/Green evening, ask once before closing only if within ask budget and not interrupting the main need. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
+## Supplement routine writeback (only if active)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`.
+
+Ask compactly only if within ask budget. Red night: capture only what Sundar volunteered.
+
+```text
+Supplements: morning stack __ / isabgol __ (gap ok?) / omega __ / magnesium __ / D3 if due __ / side effects __
+```
+
+Update `BRAIN_SNAPSHOT.md` Supplements line and `REBUILD_OS_BRAIN.md` Section 36 when active.
+
+Rules: no diagnosis, no product research, no double dosing advice, no supplement interrogation. If side effects or risk signals appear, advise doctor/lab per `core/45`.
+
+Life signal rules: no calories, no food/weight moralizing. If dinner is not yet logged on a Yellow/Green evening, ask once before closing only if within ask budget and not interrupting the main need. On Red nights, capture only what Sundar volunteers and skip the rest. The brain keeps the current week as detailed rows; older weeks are summarized at weekly review.
