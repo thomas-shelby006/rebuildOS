@@ -1,7 +1,8 @@
 # Rebuild OS Version
 
-Current: v3.3 Life Signals
-Pending: v3.4 Coherence and Deployment Hardening
+Current: v3.4 Coherence and Deployment Hardening
+Previous: v3.3 Life Signals
+Status: deployed / merged to main
 
 Rules:
 - VERSION is current status.
@@ -10,4 +11,4 @@ Rules:
 - chatgpt_live_pack is an upload bundle.
 - audit/history is archive.
 - Generated bundles are derived files.
-- Merge to main only after explicit final approval.
+- Future merges to main require explicit final approval.
