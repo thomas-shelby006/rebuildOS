@@ -109,10 +109,11 @@ Did the output move the PM stage forward?
 Learning is useful. Production advances stages.
 
 ## PM roadmap intake
-Use `templates/PM_ROADMAP_INTAKE.md` only when Sundar provides his PM roadmap. Do not invent roadmap content.
+Use `templates/PM_ROADMAP_INTAKE.md` only when Sundar provides or links his PM roadmap. Do not invent roadmap content.
 
 Capture:
-- roadmap source/date
+- roadmap source repo/branch/commit/date
+- roadmap version and approval status
 - roadmap phases
 - current phase
 - weekly milestones
@@ -126,6 +127,38 @@ Capture:
 Missed roadmap items are classified as: carry forward / reschedule / shrink / cancel / revise roadmap.
 
 Repeated misses should trigger realistic roadmap adjustment, not blind carry-forward. PM remains one track, not the whole OS. Never fake progress.
+
+## Active PM Roadmap (ingested)
+Use this section after Sundar approves/imports a specific roadmap. Current known candidate roadmap: `thomas-shelby006/pm-transition-plan`, branch `pm-plan-v3-2-execution-hardening`, content commit `515fa4b`, PR head `7aa9ddd`, status pending PR review until Sundar approves.
+
+- Roadmap source/date/commit:
+- Current phase:
+- Next milestone:
+- Weekly PM target (MVW): 3 applications / 1 learning unit / 1 LinkedIn or referral touch
+- Capacity-tier weekly versions:
+  - Green: full schedule if work is stable, roughly 8–10h total
+  - Yellow: applications target + 1 artifact touch + 1 mock, reduce new study
+  - Red: MVW only; protect job; no guilt
+- Metrics: applications / referrals / replies / recruiter screens / HM rounds / product loops / finals / offers / artifact progress
+- Funnel diagnosis rule: each weekly review, pick one fix from the funnel signal. Do not keep applying blind.
+- Missed item classification: carry forward / reschedule / shrink / cancel / revise roadmap.
+- Priority taxonomy: critical job > critical funnel > protected artifact > droppable study > optional.
+- Repeated misses → revise the roadmap realistically.
+- Job at risk → shrink PM to MVW, not zero; suppress guilt.
+- Score adherence against the chosen weekly gear, not against Green week.
+- About 70% completion can count as on-track if work stability is protected.
+- Dream-company Tier-1 referrals unlock only at W7+ and after stronger positioning/artifact readiness.
+- Do not require the full AI Evals course before progress; one working eval pipeline is enough for the artifact milestone.
+- Flag overbuilding: if a week is spent editing the roadmap with 0 applications/outreach, redirect to execution.
+- Course watching alone is not progress unless converted into notes, answer, artifact, application, outreach, or interview output.
+- PM remains one track, not the whole system.
+
+### Funnel thresholds
+- 30–40 applications and fewer than 3 responses → resume / positioning / referral issue.
+- 5+ recruiter screens and 0 HM rounds → positioning / role-fit / why-PM story issue.
+- 3+ HM rounds and 0 product loops → product sense / domain issue.
+- Repeated product-loop failures → PM interview / product judgment issue, especially prioritization and strategy.
+- Final-round failures → executive communication / story / closing issue.
 
 ## Stage stall rule
 If Sundar remains in the same PM stage for 2 consecutive weekly reviews without stage-advance evidence, name it as a stage stall.
@@ -225,7 +258,9 @@ Evidence: [specific output]
 Stall: yes/no
 Next-stage blocker: [one line]
 Roadmap provided: yes/no
+Roadmap source/commit: [if provided]
 Roadmap milestone: [if provided]
+Funnel diagnosis: [one line if active]
 Next week's PM minimum: [specific, stage-aware]
 ```
 
