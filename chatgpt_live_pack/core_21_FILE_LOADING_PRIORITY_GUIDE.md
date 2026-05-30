@@ -1,8 +1,19 @@
 # File Loading Priority Guide
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Purpose
 Rebuild OS has many files. Do not treat all files as equal. Load the smallest useful set for the current job.
+
+## Source-of-truth rule
+- Canonical sources: root live files, `core/`, `templates/`, and `platforms/`.
+- Generated artifacts are not canonical: `REBUILD_OS_ALL_IN_ONE.md`, `chatgpt_live_pack/CORE_OPERATING_MANUAL.md`, `chatgpt_live_pack/TEMPLATES_BUNDLE.md`, and flattened live-pack copies.
+- `VERSION.md` gives current package status. `CHANGELOG.md` gives release history.
+- `audit/history/` is historical only.
+
+## ChatGPT Project loading strategy
+Default setup uses the normal live pack: mutable live files + `CORE_OPERATING_MANUAL.md` + `TEMPLATES_BUNDLE.md`.
+
+`REBUILD_OS_ALL_IN_ONE.md` is fallback-only. Do not upload it together with the normal live pack unless explicitly troubleshooting. Use one strategy at a time to avoid duplicate/stale rule retrieval.
 
 ## Snapshot rule
 For new sessions, Red mornings, or tight context: load `BRAIN_SNAPSHOT.md` first. Load the full `REBUILD_OS_BRAIN.md` only when the snapshot is stale/incomplete or deeper history is needed.
@@ -30,14 +41,14 @@ If only 5 files can be active: `BRAIN_SNAPSHOT`, `00`, `41`, `11`, and `10`.
 | Weekly review / targets | `core/07_WEEKLY_REVIEW_AND_TARGETS.md`, `templates/WEEKLY_REVIEW.md`, `core/13_WEEKLY_STABILITY_SCORE.md` |
 | Sleep/wake drift | `core/35_SLEEP_ANCHOR_CORRECTION_PROTOCOL.md`, `core/22_ENERGY_DEBT_AND_AVOIDANCE_TAX.md` |
 | Technical/frontend blocker | `core/36_TECHNICAL_WORK_BLOCK_PROTOCOL.md`, `core/33_WORK_VISIBILITY_AND_COMMUNICATION_AVOIDANCE.md` |
-| PM transition | `core/32_PM_PROGRESSION_TRACKER.md`, `templates/PM_STAGE_CHECK.md` |
+| PM transition | `core/32_PM_PROGRESSION_TRACKER.md`, `templates/PM_STAGE_CHECK.md`, `templates/PM_ROADMAP_INTAKE.md` when roadmap is provided |
 | Gym/health restart | `core/37_GYM_RESTART_PROTOCOL.md`, `core/28_ENVIRONMENT_AND_FRICTION_DESIGN.md` |
 | Interview | `core/38_INTERVIEW_DAY_MODE.md`, `templates/INTERVIEW_DAY_CHECK.md` |
 | Transition/resignation/new job | `core/39_TRANSITION_MODE.md`, `core/32_PM_PROGRESSION_TRACKER.md` |
 | Preference capture/consolidation/export | `core/40_PREFERENCE_FEEDBACK_LEDGER.md`, `templates/PREFERENCE_CONSOLIDATION.md`, `templates/PREFERENCE_EXPORT.md` |
 | Repeated patterns | `core/12_PATTERN_MEMORY.md`, `core/23_GREEN_DAY_AND_RELAPSE_MODES.md` |
 | Reminders/check-ins | `core/16_REMINDERS_AND_CHECKINS.md`, `core/17_AUTOMATION_AND_CALENDAR_PLAYBOOK.md`, `core/25_AUTOMATED_CHECKIN_SCHEDULES.md` |
-| Life signals / companion tracking | `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`, `REBUILD_OS_BRAIN.md` (Section 35), `templates/LIFE_SIGNAL_CAPTURE.md`, `templates/WEIGHT_CHECK.md` |
+| Life signals / companion tracking | `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`, `REBUILD_OS_BRAIN.md` Section 35, `templates/LIFE_SIGNAL_CAPTURE.md`, `templates/WEIGHT_CHECK.md` |
 
 ## Tier 2 — Templates
 Use templates only when matching commands appear. Do not force a template if Sundar gives natural-language input.
@@ -56,9 +67,11 @@ Reference/audit files are historical unless current core files are ambiguous.
 
 `templates/WORK_VISIBILITY_CHECK.md` and `templates/COMMUNICATION_REENTRY.md` are shorthand command views. The canonical rule is `core/33_WORK_VISIBILITY_AND_COMMUNICATION_AVOIDANCE.md`.
 
+## First 7 real-use days
+The first 7 real-use days after v3.3 activation are calibration + feature freeze. Friction goes to System Notes unless a rule blocks today's action. Weekly review decides keep / simplify / remove.
+
 ## Final-use rule
 Do not load audit/history files during daily use. Do not propose new features before 7 days of use unless a rule blocks action.
-
 
 ## Launch hardening files
 
