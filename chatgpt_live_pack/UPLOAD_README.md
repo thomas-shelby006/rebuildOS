@@ -53,6 +53,12 @@ Send a rough day summary. Expected behavior:
 - ask no more than two signal questions;
 - avoid a report-card tone.
 
+## Importing the PM roadmap
+
+Paste/link the PM transition plan repo or `PM_REBUILD_OS_HANDOFF.md` into the ChatGPT Project. Rebuild OS records it through `templates/PM_ROADMAP_INTAKE.md`, writes the current roadmap state into `REBUILD_OS_BRAIN.md` Section 23, and reviews it weekly.
+
+PM remains one track, not the whole OS. If current job stability is at risk, PM shrinks to the minimum viable week instead of taking over.
+
 ## Mutable files
 
 After night/weekly review or preference consolidation, re-upload changed mutable files:
