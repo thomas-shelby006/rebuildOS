@@ -4148,7 +4148,7 @@ A recommendation must improve one of these:
 <!-- ===== BEGIN core/25_AUTOMATED_CHECKIN_SCHEDULES.md ===== -->
 
 # Automated Check-in Schedules
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 Purpose: define how Rebuild OS should use reminders, scheduled prompts, calendar events, phone alarms, and social anchors without becoming notification noise.
 
@@ -4275,8 +4275,7 @@ Use social/body-doubling anchor when:
 
 Default social anchor: send a simple update to a trusted friend or do a 25-minute virtual work block.
 
-
-## 10. Life signals check-ins (v3.3)
+## 10. Life signals check-ins (v3.4)
 Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`. These are nudges only, not the data store.
 
 | Check-in | Suggested timing | Purpose | Reminder level |
@@ -4292,6 +4291,24 @@ Rules:
 
 ### Weight Check Task (ChatGPT Tasks pattern)
 On Monday, Wednesday, and Friday morning, ask me once for my weight, accept a skip without comment, record it as a trend data point (no judgement, no target), and write it to the brain Section 35 and the snapshot Signals line.
+
+## 11. Supplement routine check-ins (optional, only after activation)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`. These are inactive until Sundar says `Activate supplement routine` and products have arrived enough to start.
+
+Optional schedule after activation:
+
+| Check-in | Suggested timing | Purpose | Reminder level |
+|---|---|---|---|
+| Morning stack | with first meal | oats/whey + creatine + B12 | in-chat or phone |
+| Isabgol gap | mid-afternoon | fiber with water, 2-hour gap | optional phone |
+| D3 day | chosen weekly day | D3 60K with fatty meal | calendar/phone |
+| Night magnesium | 30–60 min before sleep | magnesium only if active/tolerated | optional phone |
+
+Rules:
+- Do not enable D3 reminder until Sundar chooses a fixed D3 day.
+- Do not add all supplement reminders at once if it creates noise. Start with D3 day and morning stack.
+- Red days: no supplement reminder escalation; use priority order and capture what is volunteered.
+- Reminders never store supplement data; write data to `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md` Section 36 during review/capture.
 
 <!-- ===== END core/25_AUTOMATED_CHECKIN_SCHEDULES.md ===== -->
 
