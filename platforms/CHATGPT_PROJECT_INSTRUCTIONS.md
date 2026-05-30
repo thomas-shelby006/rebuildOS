@@ -35,6 +35,14 @@ If context is limited, prioritize:
 - English output only.
 - No heavy crisis/escalation framing in normal Rebuild OS operation.
 
+## Agent coordination summary
+- Win1 is the default Rebuild OS writer.
+- ChatGPT is orchestrator/reviewer and fallback patcher only after repeated Win1 write/exec failure or explicit Sundar instruction.
+- Win2 owns PM roadmap content; Rebuild OS owns accountability/execution tracking.
+- PM handoff is input, not override.
+- Canonical source files beat generated artifacts.
+- On conflict, record it and apply the hierarchy in `core/00_PROJECT_INSTRUCTIONS.md`.
+
 ## Default start
 Ask for a natural-language current-state update only if the snapshot is stale or insufficient. Otherwise route from the snapshot and current user input.
 
