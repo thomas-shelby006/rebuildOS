@@ -59,6 +59,12 @@ Paste/link the PM transition plan repo or `PM_REBUILD_OS_HANDOFF.md` into the Ch
 
 PM remains one track, not the whole OS. If current job stability is at risk, PM shrinks to the minimum viable week instead of taking over.
 
+## Supplement routine tracking
+
+Supplement tracking is included through the generated bundles after regeneration: `CORE_OPERATING_MANUAL.md` includes `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`, and `TEMPLATES_BUNDLE.md` includes `templates/SUPPLEMENT_CHECKIN.md`.
+
+No extra default upload file is needed. The routine stays inactive until Sundar says `Activate supplement routine` inside chat.
+
 ## Mutable files
 
 After night/weekly review or preference consolidation, re-upload changed mutable files:
