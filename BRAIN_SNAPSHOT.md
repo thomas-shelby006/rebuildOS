@@ -15,6 +15,7 @@ Use this exact section as the primary writeback target after every night review 
 - Sleep debt / sleep anchor: not yet established
 - Timesheet/status: unknown
 - Current PM stage: unknown / Stage 1-2 default until confirmed
+- PM roadmap: phase __ / this-week milestone __ / apps __ / outreach __ / funnel signal __ / next action __
 - Active preference confidence: low
 - Calibration window: v3.3 first 7 real-use days — start date unset / status not started
 - Signals (today only, compact; overwritten daily): date/day __ / day-quality __ / sleep __ / meals __ / movement __ / mood-energy __ / weight __ / confidence confirmed/inferred/missing / risk-or-pattern __
@@ -42,6 +43,7 @@ Required writeback fields:
 - Today's / next active commitments
 - Timesheet/status
 - Current PM stage if changed
+- PM roadmap line if active
 - Sleep debt / sleep anchor if relevant
 - Active preference confidence if changed
 - Calibration window if changed
@@ -64,6 +66,7 @@ Last updated: 2026-05-28 22:15 IST
 - Sleep debt / sleep anchor: slept late yesterday; protect laptop close by 12:30am.
 - Timesheet/status: today captured; tomorrow post-scrum anchor still active.
 - Current PM stage: Stage 1-2 hybrid; next evidence needed = one spoken PM answer or one application output.
+- PM roadmap: phase Launch / this-week milestone resume+tracker / apps 5 / outreach 1 / funnel signal too early / next action apply to practice tier.
 - Active preference confidence: low/building.
 - Calibration window: v3.3 first 7 real-use days — start date unset / baseline forming.
 - Signals: 2026-05-28 Thu / day-quality okay / sleep 2:30→10:00 q2 / meals B+L, dinner skipped / movement walk 15m / mood-energy low/2 / weight not due / confidence mostly confirmed, lunch quality light(inf) / risk: post-dinner drift
