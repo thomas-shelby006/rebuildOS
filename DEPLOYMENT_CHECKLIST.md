@@ -3,6 +3,12 @@ Version: v3.4 pre-use enablement
 
 Purpose: prevent wrong-file upload, duplicate rule loading, and setup drift.
 
+## ChatGPT Project capacity note
+
+Official OpenAI file-upload limits are sufficient for this package: ChatGPT Plus supports up to 20 files per Project, 512 MB per file, and a 2M-token limit for text/document files. The default Rebuild OS upload set is 9 files, so it fits inside the Project file-count limit.
+
+If the UI shows a different limit, follow the UI and use the tight-limit priority order below.
+
 ## Before upload
 
 - [ ] PR #3 source files are reviewed.
@@ -35,7 +41,9 @@ grep -q "PM_ROADMAP_INTAKE" chatgpt_live_pack/TEMPLATES_BUNDLE.md
 grep -q "Active PM Roadmap" chatgpt_live_pack/CORE_OPERATING_MANUAL.md
 grep -q "Agent coordination" REBUILD_OS_ALL_IN_ONE.md
 grep -q "Tools-down work mode" REBUILD_OS_ALL_IN_ONE.md
-grep -q "cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b" REBUILD_OS_ALL_IN_ONE.md
+grep -q "PM_REBUILD_OS_HANDOFF" REBUILD_OS_ALL_IN_ONE.md
+grep -q "FIRST_REAL_USE_SCRIPT" REBUILD_OS_ALL_IN_ONE.md
+grep -q "DEPLOYMENT_CHECKLIST" REBUILD_OS_ALL_IN_ONE.md
 ```
 
 ## Default ChatGPT Project upload
@@ -53,6 +61,22 @@ Upload from `chatgpt_live_pack/`:
 - [ ] `TEMPLATES_BUNDLE.md`
 
 Do not upload `REBUILD_OS_ALL_IN_ONE.md` with this default set.
+
+## Tight-limit priority order
+
+If the Project UI prevents uploading all default files, prioritize:
+
+1. Project Instructions text from `platforms_CHATGPT_PROJECT_INSTRUCTIONS.md`
+2. `BRAIN_SNAPSHOT.md`
+3. `REBUILD_OS_BRAIN.md`
+4. `core_00_PROJECT_INSTRUCTIONS.md`
+5. `core_21_FILE_LOADING_PRIORITY_GUIDE.md`
+6. `CORE_OPERATING_MANUAL.md`
+7. `TEMPLATES_BUNDLE.md`
+8. `core_41_ACTIVE_PREFERENCE_PROFILE.md`
+9. `core_40_PREFERENCE_FEEDBACK_LEDGER.md`, only if needed
+
+If this still does not fit, use fallback single-file mode with `REBUILD_OS_ALL_IN_ONE.md` alone.
 
 ## Project Instructions
 
