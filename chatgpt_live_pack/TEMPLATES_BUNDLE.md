@@ -670,6 +670,7 @@ After weekly review, update `BRAIN_SNAPSHOT.md` with:
 - first action for next week/tomorrow
 - PM stage if changed
 - PM roadmap line if active
+- supplement line if active
 - preference confidence/export status if changed
 
 ## Streak review rule
@@ -679,7 +680,7 @@ Review only two streaks during the v2.6 test period:
 
 If either streak becomes a shame trigger, stop displaying streak numbers in normal check-ins and keep the behavior tracked silently.
 
-## Life signals synthesis (v3.3)
+## Life signals synthesis (v3.4)
 Synthesize the week's signals in a useful pattern summary, strict but non-shaming. Canonical: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
 Required output:
@@ -707,6 +708,29 @@ Improvement or decline vs last week:
 ```
 
 If this is the first 7 days of v3.3 or data is sparse, say: `baseline forming`. Do not overclaim a trend from one week, inferred data, or missing data.
+
+## Supplement routine review (if active)
+Canonical: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`. Skip this block entirely until Sundar activates the routine.
+
+```text
+Supplement routine review:
+- Phase:
+- Creatine days:
+- B12 days:
+- D3 done if due:
+- Whey/protein consistency:
+- Isabgol consistency:
+- Omega/magnesium consistency:
+- Side effects/cautions:
+- Phase progress:
+- Next adjustment:
+```
+
+Rules:
+- Week 8: switch B12 to 2–3x/week and D3 to once every 2 weeks.
+- Around 3 months: remind 25-OH Vitamin D retest if possible.
+- Foundation beats stack: sleep, sunlight, water, breakfast/protein still matter more than supplement completion.
+- No diagnosis, no product research, no moralizing, no supplement guilt.
 
 ## PM roadmap review (if roadmap provided)
 Use this block when a PM roadmap is active or imported from `templates/PM_ROADMAP_INTAKE.md`.
