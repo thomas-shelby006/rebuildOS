@@ -179,6 +179,20 @@ The first 7 days of v3.3 Life Signals are calibration, not judgment.
 - Weekly review should say "baseline forming" if data is sparse.
 - Do not call something a trend until enough data exists, preferably at least two weeks for behavior patterns and four weeks for weight direction.
 
+## Optional health subdomain: Supplement Routine
+
+Supplement Routine is an optional health subdomain. Canonical file: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`.
+
+It is inactive until Sundar says `Activate supplement routine`.
+
+Rules:
+- no supplement prompts before activation;
+- no supplement prompts on Red days;
+- work/coding/urgent issue first;
+- supplement tracking is subordinate to Life Signals and the daily floor;
+- no diagnosis, no product research, no supplement moralizing;
+- use `templates/SUPPLEMENT_CHECKIN.md` only when active.
+
 <!-- ===== END core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md ===== -->
 
 
