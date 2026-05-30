@@ -16,6 +16,7 @@ Use this exact section as the primary writeback target after every night review 
 - Timesheet/status: unknown
 - Current PM stage: unknown / Stage 1-2 default until confirmed
 - PM roadmap: phase __ / this-week milestone __ / apps __ / outreach __ / funnel signal __ / next action __
+- Supplements: inactive until activation / morning-stack __ / isabgol __ / omega __ / magnesium __ / D3-if-due __ / issue __
 - Active preference confidence: low
 - Calibration window: v3.3 first 7 real-use days — start date unset / status not started
 - Signals (today only, compact; overwritten daily): date/day __ / day-quality __ / sleep __ / meals __ / movement __ / mood-energy __ / weight __ / confidence confirmed/inferred/missing / risk-or-pattern __
@@ -44,6 +45,7 @@ Required writeback fields:
 - Timesheet/status
 - Current PM stage if changed
 - PM roadmap line if active
+- Supplements line if active or activation state changes
 - Sleep debt / sleep anchor if relevant
 - Active preference confidence if changed
 - Calibration window if changed
@@ -67,6 +69,7 @@ Last updated: 2026-05-28 22:15 IST
 - Timesheet/status: today captured; tomorrow post-scrum anchor still active.
 - Current PM stage: Stage 1-2 hybrid; next evidence needed = one spoken PM answer or one application output.
 - PM roadmap: phase Launch / this-week milestone resume+tracker / apps 5 / outreach 1 / funnel signal too early / next action apply to practice tier.
+- Supplements: active Week 1 / morning-stack done / isabgol missed / omega done / magnesium planned / D3 not due / issue none.
 - Active preference confidence: low/building.
 - Calibration window: v3.3 first 7 real-use days — start date unset / baseline forming.
 - Signals: 2026-05-28 Thu / day-quality okay / sleep 2:30→10:00 q2 / meals B+L, dinner skipped / movement walk 15m / mood-energy low/2 / weight not due / confidence mostly confirmed, lunch quality light(inf) / risk: post-dinner drift
