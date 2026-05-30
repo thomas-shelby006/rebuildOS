@@ -11,6 +11,7 @@ mkdir -p "$PACK"
 # --- Core operating manual bundle (high-use core modules, Life Signals first) ---
 CORE_FILES=(
   core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md
+  core/45_SUPPLEMENT_ROUTINE_TRACKING.md
   core/10_ADAPTIVE_DAY_ENGINE.md
   core/11_STATE_ROUTER_AND_MODE_SWITCH.md
   core/06_COMMITMENT_LEDGER.md
@@ -52,6 +53,7 @@ TEMPLATE_FILES=(
   templates/NIGHT_REVIEW.md
   templates/WEEKLY_REVIEW.md
   templates/PM_ROADMAP_INTAKE.md
+  templates/SUPPLEMENT_CHECKIN.md
   templates/STUCK_CHECKIN.md
   templates/REENTRY_AFTER_WASTED_TIME.md
   templates/TIMESHEET_ANCHOR_CHECK.md
