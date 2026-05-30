@@ -666,7 +666,7 @@ No new feature additions before 7 days of real use unless a rule blocks today's 
 
 Rebuild OS v3.3 Life Signals adds active life-signal tracking and time-aware companion behavior: sleep, meals/food quality, weight (M/W/F), mood/energy/day-quality, movement, hygiene-when-relevant, work visibility, PM, and drift — stored as a bounded rolling window. Canonical rules live in `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`.
 
-Rebuild OS v3.4 hardening clarifies source-of-truth rules, ChatGPT upload strategy, finalize-before-merge workflow, first-use calibration, PM roadmap intake, and PM funnel accountability. PM roadmap integration is pending final PM-plan approval.
+Rebuild OS v3.4 hardening clarifies source-of-truth rules, ChatGPT upload strategy, finalize-before-merge workflow, first-use calibration, PM roadmap intake, PM funnel accountability, and dormant-until-activated supplement routine tracking.
 
 ## 20. Work Visibility and Communication
 - Daily visible work signal:
@@ -792,7 +792,7 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 
 ### Tracking preferences
 - Active? yes
-- Domains on: sleep, meals, weight (M/W/F), mood/energy, movement, day-quality, drift, work visibility, PM
+- Domains on: sleep, meals, weight (M/W/F), mood/energy, movement, day-quality, drift, work visibility, PM, supplements-if-activated
 - Opted-out domains: none yet
 - No calories/macros. No food/weight moralizing. Red days exempt.
 
@@ -836,8 +836,46 @@ Active as of v3.3. Canonical rules: `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`
 - Last weight check date:
 - Next weight check due: next Monday / Wednesday / Friday morning
 
-## 36. Handoff Summary
-Rebuild OS is a self-coaching and life-management system. It supports one long chat plus this live brain as handoff. It tracks commitments, capacity, sleep debt, avoidance patterns, weekly targets, reminders, experiments, environment rules, work visibility, sleep anchors, technical blockers, gym restart, interview mode, system notes, PM-roadmap accountability when provided, and daily life signals stored as a bounded rolling window. It is strict but non-shaming, a steady companion but never a therapist or romantic partner. Current priority is rebuilding day-to-day reliability while keeping PM transition as one important track.
+## 36. Supplement Routine (rolling)
+Canonical rules: `core/45_SUPPLEMENT_ROUTINE_TRACKING.md`. Dormant until Sundar explicitly says `Activate supplement routine`.
+
+### Activation
+- Active? no
+- Supplement routine start date:
+- Products arrived? unknown
+- Current phase: inactive / Week 1 ramp / Weeks 2–8 correction / Maintenance
+- Fixed D3 day:
+- D3 first dose date:
+- B12 daily start date:
+- Creatine daily start date:
+- Isabgol start date:
+- 3-month Vitamin D retest reminder date:
+
+### Current week — compact tracking
+| Date | Morning stack | Isabgol + gap | Omega-3 | Magnesium | D3 if due | Water/protein note | Side effects/cautions |
+|---|---|---|---|---|---|---|---|
+| | | | | | | | |
+
+### Weekly summary
+- Creatine days:
+- B12 days:
+- Whey/protein consistency:
+- Isabgol consistency:
+- Omega-3 consistency:
+- Magnesium consistency:
+- D3 done if due:
+- Side effects/cautions:
+- Phase progress:
+- Next adjustment:
+
+### Safety notes
+- No diagnosis. No new supplement suggestions unless Sundar explicitly asks.
+- D3 60K weekly during correction, never daily; never double.
+- Isabgol must stay 2 hours away from pills/supplements/medicines.
+- If risk symptoms/interactions/lab concerns appear, advise doctor/lab.
+
+## 37. Handoff Summary
+Rebuild OS is a self-coaching and life-management system. It supports one long chat plus this live brain as handoff. It tracks commitments, capacity, sleep debt, avoidance patterns, weekly targets, reminders, experiments, environment rules, work visibility, sleep anchors, technical blockers, gym restart, interview mode, system notes, PM-roadmap accountability when provided, supplement routine tracking when activated, and daily life signals stored as a bounded rolling window. It is strict but non-shaming, a steady companion but never a therapist or romantic partner. Current priority is rebuilding day-to-day reliability while keeping PM transition as one important track.
 
 <!-- ===== END REBUILD_OS_BRAIN.md ===== -->
 
