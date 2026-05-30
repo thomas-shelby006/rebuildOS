@@ -1,0 +1,60 @@
+name: Regenerate v3.4 artifacts
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - v3-4-hardening
+    paths:
+      - '.github/workflows/**'
+      - 'build_all_in_one.sh'
+      - 'build_chatgpt_pack.sh'
+      - 'README.md'
+      - 'BRAIN_SNAPSHOT.md'
+      - 'REBUILD_OS_BRAIN.md'
+      - 'core/**'
+      - 'templates/**'
+      - 'platforms/**'
+      - '.kiro/steering/**'
+      - 'audit/V3_4_REQUIREMENT_COMPLETION_AUDIT.md'
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: v3-4-hardening
+          fetch-depth: 0
+
+      - name: Run artifact generators
+        run: |
+          bash build_all_in_one.sh
+          bash build_chatgpt_pack.sh
+
+      - name: Check generated content
+        run: |
+          grep -q "PM_ROADMAP_INTAKE" chatgpt_live_pack/TEMPLATES_BUNDLE.md
+          grep -q "Active PM Roadmap" chatgpt_live_pack/CORE_OPERATING_MANUAL.md
+          grep -q "Agent coordination" REBUILD_OS_ALL_IN_ONE.md
+          grep -q "Tools-down work mode" REBUILD_OS_ALL_IN_ONE.md
+          grep -q "cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b" REBUILD_OS_ALL_IN_ONE.md
+
+      - name: Commit regenerated artifacts
+        run: |
+          git config user.name "kiro-artifact-bot"
+          git config user.email "kiro-artifact-bot@users.noreply.github.com"
+
+          git add REBUILD_OS_ALL_IN_ONE.md chatgpt_live_pack/
+
+          if git diff --cached --quiet; then
+            echo "No generated artifact changes."
+          else
+            git commit -m "Regenerate v3.4 artifacts after requirement audit fixes"
+            git push origin v3-4-hardening
+          fi
