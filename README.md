@@ -113,6 +113,17 @@ Generated artifacts are not canonical:
 
 If generated files disagree with canonical source files, source files win and artifacts should be regenerated.
 
+## Agent coordination policy
+
+- Sundar is the final approver.
+- ChatGPT is the orchestrator, reviewer, decision logic, and fallback patcher.
+- Kiro Win1 is the default Rebuild OS implementer/writer.
+- Kiro Win2 owns the PM transition plan repo and handoff.
+- Win1 gets the first implementation attempt for Rebuild OS changes.
+- If Win1 fails multiple clean write/exec attempts, ChatGPT may patch the PR branch directly while preserving Win1's latest validated plan/spec.
+- PM repo owns PM roadmap content; Rebuild OS owns accountability/execution tracking.
+- On conflict, latest explicit Sundar instruction wins, then canonical source files, then generated artifacts.
+
 ## Merge policy
 
 Feature branches and PRs are review artifacts. `main` is updated only after Sundar explicitly says the final version is approved and instructs merge.
