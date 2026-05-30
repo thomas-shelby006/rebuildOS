@@ -10,6 +10,9 @@ on:
       - 'build_all_in_one.sh'
       - 'build_chatgpt_pack.sh'
       - 'README.md'
+      - 'VERSION.md'
+      - 'DEPLOYMENT_CHECKLIST.md'
+      - 'FIRST_REAL_USE_SCRIPT.md'
       - 'BRAIN_SNAPSHOT.md'
       - 'REBUILD_OS_BRAIN.md'
       - 'core/**'
@@ -17,6 +20,7 @@ on:
       - 'platforms/**'
       - '.kiro/steering/**'
       - 'audit/V3_4_REQUIREMENT_COMPLETION_AUDIT.md'
+      - 'audit/V3_4_FINAL_DEPLOYMENT_READINESS_AUDIT.md'
 
 permissions:
   contents: write
@@ -43,7 +47,9 @@ jobs:
           grep -q "Active PM Roadmap" chatgpt_live_pack/CORE_OPERATING_MANUAL.md
           grep -q "Agent coordination" REBUILD_OS_ALL_IN_ONE.md
           grep -q "Tools-down work mode" REBUILD_OS_ALL_IN_ONE.md
-          grep -q "cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b" REBUILD_OS_ALL_IN_ONE.md
+          grep -q "PM_REBUILD_OS_HANDOFF" REBUILD_OS_ALL_IN_ONE.md
+          grep -q "FIRST_REAL_USE_SCRIPT" REBUILD_OS_ALL_IN_ONE.md
+          grep -q "DEPLOYMENT_CHECKLIST" REBUILD_OS_ALL_IN_ONE.md
 
       - name: Commit regenerated artifacts
         run: |
@@ -55,6 +61,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated artifact changes."
           else
-            git commit -m "Regenerate v3.4 artifacts after requirement audit fixes"
+            git commit -m "Regenerate v3.4 artifacts after deployment cleanup"
             git push origin v3-4-hardening
           fi
