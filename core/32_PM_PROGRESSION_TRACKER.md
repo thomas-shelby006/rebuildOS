@@ -1,5 +1,5 @@
 # PM Progression Tracker
-Version: v3.2 Deployment Ready
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Purpose
 PM transition should not be tracked only as “did PM prep today?” That creates fake progress.
@@ -108,6 +108,25 @@ Did the output move the PM stage forward?
 
 Learning is useful. Production advances stages.
 
+## PM roadmap intake
+Use `templates/PM_ROADMAP_INTAKE.md` only when Sundar provides his PM roadmap. Do not invent roadmap content.
+
+Capture:
+- roadmap source/date
+- roadmap phases
+- current phase
+- weekly milestones
+- daily/weekly minimum
+- evidence of progress
+- deadlines
+- blockers
+- review cadence
+- what to shrink if capacity drops
+
+Missed roadmap items are classified as: carry forward / reschedule / shrink / cancel / revise roadmap.
+
+Repeated misses should trigger realistic roadmap adjustment, not blind carry-forward. PM remains one track, not the whole OS. Never fake progress.
+
 ## Stage stall rule
 If Sundar remains in the same PM stage for 2 consecutive weekly reviews without stage-advance evidence, name it as a stage stall.
 
@@ -118,6 +137,7 @@ Do not blame. Diagnose:
 3. Is Sundar passively watching course content?
 4. Is the next stage unclear?
 5. Is shame/fear of applying blocking output?
+6. Is the roadmap unrealistic for current capacity?
 
 Then force one decision:
 
@@ -126,7 +146,8 @@ Stage stall detected. Choose one:
 1. shrink PM minimum for one week,
 2. change method from course-watching to output creation,
 3. set a concrete stage-advance target,
-4. put PM track on temporary maintenance because job stability is currently primary.
+4. revise the PM roadmap,
+5. put PM track on temporary maintenance because job stability is currently primary.
 ```
 
 ## Night review field
@@ -138,6 +159,7 @@ PM action:
 What I learned today:
 What I produced today:
 Does this move the stage forward?
+Roadmap item touched? yes/no/not provided yet
 ```
 
 ## Weekly review field
@@ -149,6 +171,9 @@ Stage progress this week:
 Output evidence:
 Stage stall? yes/no
 Next-stage blocker:
+Roadmap provided? yes/no
+Roadmap milestone status:
+Missed roadmap items classification:
 Recommended PM target next week:
 ```
 
@@ -186,7 +211,6 @@ Transition Mode redesigns:
 
 Do not assume the current-job anchor remains valid after resignation or job change.
 
-
 ## Interview Day Mode
 When Sundar receives an interview invite, has an interview scheduled, or completes an interview, use `core/38_INTERVIEW_DAY_MODE.md`.
 
@@ -200,6 +224,8 @@ PM stage as of [date]: Stage [N/name]
 Evidence: [specific output]
 Stall: yes/no
 Next-stage blocker: [one line]
+Roadmap provided: yes/no
+Roadmap milestone: [if provided]
 Next week's PM minimum: [specific, stage-aware]
 ```
 
@@ -212,4 +238,5 @@ Daily learning notes are useful only if synthesized. At weekly review, summarize
 This week I understand ___ better than last week.
 This week I produced ___ that moves the PM track forward.
 The next missing evidence is ___.
+The roadmap adjustment, if any, is ___.
 ```
