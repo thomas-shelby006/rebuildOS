@@ -1,5 +1,5 @@
 # Weekly Review
-Version: v3.3 Life Signals
+Version: v3.4 Coherence and Deployment Hardening
 
 ## Default: minimum weekly review
 Target duration: 5 minutes. Use this unless Sundar asks for full review or there is a serious pattern to analyze.
@@ -141,6 +141,7 @@ After weekly review, update `BRAIN_SNAPSHOT.md` with:
 - next week's three non-negotiables
 - first action for next week/tomorrow
 - PM stage if changed
+- PM roadmap line if active
 - preference confidence/export status if changed
 
 ## Streak review rule
@@ -179,14 +180,37 @@ Improvement or decline vs last week:
 
 If this is the first 7 days of v3.3 or data is sparse, say: `baseline forming`. Do not overclaim a trend from one week, inferred data, or missing data.
 
-## PM roadmap intake/accountability
-If Sundar provides a PM roadmap later, do not invent missing details. Ingest it as a structured accountability track:
-- roadmap phase
-- next milestone
-- weekly output target
-- blockers
-- missed item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+## PM roadmap review (if roadmap provided)
+Use this block when a PM roadmap is active or imported from `templates/PM_ROADMAP_INTAKE.md`.
 
-PM remains one important track, not the whole OS.
+```text
+PM roadmap review:
+- Roadmap phase:
+- This week's PM target:
+- Applications sent:
+- Referrals/outreach:
+- Replies:
+- Recruiter screens:
+- HM rounds:
+- Product loops:
+- Final rounds:
+- PM prep outputs:
+- Artifact progress:
+- Funnel diagnosis:
+- One fix for next week:
+- Missed PM item classification: carry forward / reschedule / shrink / cancel / revise roadmap
+- Next week capacity tier: Red / Yellow / Green
+```
+
+Rules:
+- Many applications but no replies → fix resume / positioning / referrals.
+- Screens but no HM rounds → fix story / role fit.
+- HM rounds but no product loops → fix product sense / domain.
+- PM rounds fail → fix product sense / metrics / prioritization / execution.
+- Job unstable → shrink PM target and protect work visibility.
+- Course watching alone does not count unless converted into output.
+- No blind carry-forward.
+- Score the week against the chosen capacity gear, not against Green by default.
+- PM remains one important track, not the whole OS.
 
 Then age the rolling window in `REBUILD_OS_BRAIN.md` Section 35: push the oldest detailed week into a weekly summary row; at month end, compress four weekly summaries into one monthly line. Keep the section bounded. No calories, no moralizing.
