@@ -1,8 +1,15 @@
-# Rebuild OS v3.3 Life Signals
+# Rebuild OS v3.4 Coherence and Deployment Hardening
 
-Rebuild OS is Sundar's therapy-informed self-coaching, accountability, planning, and life-management system.
+Rebuild OS is Sundar's self-coaching, accountability, planning, and life-management system.
 
-This package is **deployment-ready for personal use**. The goal now is not more design. The goal is to run the system for one real week, update the brain/snapshot, and let real usage reveal the next changes.
+This package is intended for personal daily use inside ChatGPT Projects, with GitHub/Kiro as the source/archive/builder workspace.
+
+## Current status
+
+- Current merged base: v3.3 Life Signals.
+- This branch: v3.4 coherence/deployment hardening.
+- See `VERSION.md` for current package status and source-of-truth rules.
+- See `CHANGELOG.md` for history.
 
 ## What Rebuild OS does
 
@@ -18,28 +25,31 @@ It helps Sundar:
 - restart gym without overcommitting
 - progress toward PM roles without making PM the whole system
 - run night and weekly reviews without punishment
-- act as a steady daily companion that tracks life signals over time — sleep, meals/food quality, weight (Mon/Wed/Fri), mood/energy/day-quality, movement, hygiene-when-relevant, work visibility, PM, and drift — stored as a bounded rolling window (detailed current week, summarized recent weeks, compressed older months) and surfaced as week-to-week patterns
-- preserve context through `BRAIN_SNAPSHOT.md`, `REBUILD_OS_BRAIN.md`, and handoff files
-- adapt over time through the preference feedback ledger and active preference profile
+- track life signals as bounded week-to-week patterns
+- preserve context through `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md`
+- adapt over time through preference feedback and the active preference profile
+
+## ChatGPT Project setup
+
+Default setup uses `chatgpt_live_pack/`.
+
+Use one strategy at a time:
+
+1. **Normal live pack** — upload the files listed in `chatgpt_live_pack/UPLOAD_README.md`.
+2. **Fallback single-file mode** — upload `REBUILD_OS_ALL_IN_ONE.md` alone only if the normal live pack cannot be used.
+
+Do not upload both strategies together unless explicitly troubleshooting. Duplicate rules can create stale/conflicting retrieval.
 
 ## Start here
 
-For a new Claude / ChatGPT Project, upload or keep active:
+For a new ChatGPT Project:
 
-1. `core/00_PROJECT_INSTRUCTIONS.md`
-2. `BRAIN_SNAPSHOT.md`
-3. `REBUILD_OS_BRAIN.md`
-4. `core/41_ACTIVE_PREFERENCE_PROFILE.md`
-5. `core/21_FILE_LOADING_PRIORITY_GUIDE.md`
-6. platform file if needed:
-   - `platforms/CLAUDE_PROJECT_INSTRUCTIONS.md`
-   - `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md`
+1. Use `chatgpt_live_pack/UPLOAD_README.md`.
+2. Upload the normal live pack files.
+3. Paste `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md` into Project Instructions.
+4. Run the startup smoke test from the upload guide.
 
-Then paste `FIRST_RUN_PROMPT.md`.
-
-### ChatGPT Plus (primary daily home)
-
-ChatGPT Projects is the primary daily environment. Use the curated hybrid pack in `chatgpt_live_pack/`: upload those files into the Project and paste `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md` into the Project Instructions field. Full steps are in `chatgpt_live_pack/UPLOAD_README.md`. GitHub/Kiro remains the source/archive/builder.
+For Claude or other platforms, use the relevant file in `platforms/`.
 
 ## Daily use commands
 
@@ -58,11 +68,11 @@ Core commands:
 - `Weekly review`
 - `Export preferences`
 
-## First 7 days rule
+## First 7 real-use days
 
-Do not add new features before 7 real-use days.
+The first 7 real-use days after v3.3 activation are calibration + feature freeze.
 
-Allowed changes during first use:
+Allowed during first use:
 
 1. update brain/snapshot
 2. capture and export preferences
@@ -70,43 +80,53 @@ Allowed changes during first use:
 4. fix true contradictions
 5. fix anything that blocks use today
 
-Everything else goes to System Notes and weekly review.
+Everything else goes to System Notes and weekly review. Weekly review decides keep / simplify / remove.
 
 ## File hierarchy
 
+- `VERSION.md` = current package status.
+- `CHANGELOG.md` = history.
 - `BRAIN_SNAPSHOT.md` = fast current-state starter.
 - `REBUILD_OS_BRAIN.md` = durable live brain.
 - `core/00_PROJECT_INSTRUCTIONS.md` = canonical behavior rules.
 - `core/41_ACTIVE_PREFERENCE_PROFILE.md` = active personalization.
 - `core/40_PREFERENCE_FEEDBACK_LEDGER.md` = raw preference feedback; load only when needed.
 - `core/21_FILE_LOADING_PRIORITY_GUIDE.md` = tells the AI what to load and ignore.
-- `REBUILD_OS_ALL_IN_ONE.md` = single-file fallback if individual file loading fails or a platform cannot handle the full folder structure.
+- `REBUILD_OS_ALL_IN_ONE.md` = fallback-only single-file recovery. Do not upload with normal live pack by default.
 - `templates/` = command-specific workflows.
-- `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md` = active life-signal tracking + time-aware companion rules (v3.3); rolling history lives in `REBUILD_OS_BRAIN.md` Section 35.
-- `chatgpt_live_pack/` = generated, upload-ready ChatGPT Project set (curated files + `CORE_OPERATING_MANUAL.md` and `TEMPLATES_BUNDLE.md` bundles + `UPLOAD_README.md`). Source files remain canonical; bundles are generated artifacts.
+- `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md` = active life-signal tracking + time-aware companion rules.
+- `chatgpt_live_pack/` = generated upload artifact for ChatGPT Project.
 - `platforms/` = Claude / ChatGPT / Canvas adapters.
 - `audit/` = setup and validation only.
 - `audit/history/` = old review artifacts; do not load during daily use.
 
-## Precedence
+## Source-of-truth policy
 
-1. Latest explicit Sundar instruction wins.
-2. Active Preference Profile wins over package defaults when direct/confirmed.
-3. Brain and Snapshot provide current state.
-4. Core files define behavior.
-5. Templates execute specific workflows.
-6. Audit/history/reference files do not override active rules.
+Canonical sources are root live files, `core/`, `templates/`, and `platforms/`.
+
+Generated artifacts are not canonical:
+
+- `REBUILD_OS_ALL_IN_ONE.md`
+- `chatgpt_live_pack/CORE_OPERATING_MANUAL.md`
+- `chatgpt_live_pack/TEMPLATES_BUNDLE.md`
+- flattened live-pack copies
+
+If generated files disagree with canonical source files, source files win and artifacts should be regenerated.
+
+## Merge policy
+
+Feature branches and PRs are review artifacts. `main` is updated only after Sundar explicitly says the final version is approved and instructs merge.
+
+## System-improvement guardrail
+
+System improvement is not the daily system. Before starting Rebuild OS editing, confirm today's minimum actions are done or scheduled. If not, cap system work to one scoped task or defer it. Keep one active improvement PR unless Sundar explicitly overrides.
 
 ## Direct preferences preserved
 
 - English output only, even if input is Tamil/Tanglish.
 - Strict, direct, non-shaming tone.
 - No fake therapist claim.
-- No heavy escalation framing inside normal Rebuild OS operation.
+- No heavy escalation framing inside normal operation.
 - PM/career is one important track, not the entire system.
 - Current job stability and work visibility are protected.
 - Latest explicit update wins.
-
-## Deployment status
-
-This is the polished deployment build. Use it. Do not continue the design loop until after the first 7 days of actual operation.
