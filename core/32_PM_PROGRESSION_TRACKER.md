@@ -129,7 +129,7 @@ Missed roadmap items are classified as: carry forward / reschedule / shrink / ca
 Repeated misses should trigger realistic roadmap adjustment, not blind carry-forward. PM remains one track, not the whole OS. Never fake progress.
 
 ## Active PM Roadmap (ingested)
-Use this section after Sundar approves/imports a specific roadmap. Current known candidate roadmap: `thomas-shelby006/pm-transition-plan`, branch `pm-plan-v3-2-execution-hardening`, content commit `515fa4b`, PR head `7aa9ddd`, status pending PR review until Sundar approves.
+Use this section after Sundar approves/imports a specific roadmap. Current known candidate roadmap: `thomas-shelby006/pm-transition-plan`, branch `pm-plan-v3-2-execution-hardening`, handoff head `cca0eb6fd86c9213aad39d98a4d4d9e6df5b728b`, `PM_REBUILD_OS_HANDOFF.md` v1.1, `is_final: false`, status pending PM PR #1 review until Sundar explicitly approves/merges.
 
 - Roadmap source/date/commit:
 - Current phase:
