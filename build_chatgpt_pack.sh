@@ -26,7 +26,7 @@ CORE_FILES=(
 )
 
 {
-  echo "# Core Operating Manual — Rebuild OS v3.3 Life Signals"
+  echo "# Core Operating Manual — Rebuild OS v3.4 Coherence and Deployment Hardening"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical core/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
@@ -51,6 +51,7 @@ TEMPLATE_FILES=(
   templates/MIDDAY_ANCHOR_CHECK.md
   templates/NIGHT_REVIEW.md
   templates/WEEKLY_REVIEW.md
+  templates/PM_ROADMAP_INTAKE.md
   templates/STUCK_CHECKIN.md
   templates/REENTRY_AFTER_WASTED_TIME.md
   templates/TIMESHEET_ANCHOR_CHECK.md
@@ -61,7 +62,7 @@ TEMPLATE_FILES=(
 )
 
 {
-  echo "# Templates Bundle — Rebuild OS v3.3 Life Signals"
+  echo "# Templates Bundle — Rebuild OS v3.4 Coherence and Deployment Hardening"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical templates/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
