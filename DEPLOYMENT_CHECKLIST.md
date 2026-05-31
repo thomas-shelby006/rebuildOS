@@ -1,5 +1,5 @@
 # Rebuild OS — Deployment Checklist
-Version: v3.4 pre-use enablement
+Version: v3.4 deployment checklist
 
 Purpose: prevent wrong-file upload, duplicate rule loading, and setup drift.
 
@@ -11,8 +11,7 @@ If the UI shows a different limit, follow the UI and use the tight-limit priorit
 
 ## Before upload
 
-- [ ] PR #3 source files are reviewed.
-- [ ] Generated artifacts are regenerated after final source edits.
+- [ ] Generated artifacts are current after final source edits.
 - [ ] `REBUILD_OS_ALL_IN_ONE.md` is treated as fallback only.
 - [ ] Normal live pack and all-in-one are not uploaded together.
 - [ ] Repo remains private.
@@ -44,6 +43,10 @@ grep -q "Tools-down work mode" REBUILD_OS_ALL_IN_ONE.md
 grep -q "PM_REBUILD_OS_HANDOFF" REBUILD_OS_ALL_IN_ONE.md
 grep -q "FIRST_REAL_USE_SCRIPT" REBUILD_OS_ALL_IN_ONE.md
 grep -q "DEPLOYMENT_CHECKLIST" REBUILD_OS_ALL_IN_ONE.md
+grep -q "core/45_SUPPLEMENT_ROUTINE_TRACKING.md" chatgpt_live_pack/CORE_OPERATING_MANUAL.md
+grep -q "templates/SUPPLEMENT_CHECKIN.md" chatgpt_live_pack/TEMPLATES_BUNDLE.md
+grep -q "Activate supplement routine" chatgpt_live_pack/CORE_OPERATING_MANUAL.md
+grep -q "Supplement routine review" chatgpt_live_pack/TEMPLATES_BUNDLE.md
 ```
 
 ## Default ChatGPT Project upload
@@ -143,9 +146,11 @@ After night/weekly review, re-upload only files that changed:
 - [ ] `core_41_ACTIVE_PREFERENCE_PROFILE.md`, if changed
 - [ ] `core_40_PREFERENCE_FEEDBACK_LEDGER.md`, if changed
 
-## Do not merge until
+## Future deployment / release checklist
 
-- [ ] Generated artifacts are regenerated.
-- [ ] Smoke tests pass.
-- [ ] PR #3 is reviewed.
-- [ ] Sundar explicitly says final approved and instructs merge.
+Use this for future PRs before merging to main:
+
+- [ ] generated artifacts regenerated
+- [ ] smoke tests pass
+- [ ] changed files reviewed
+- [ ] Sundar explicitly approves final merge
