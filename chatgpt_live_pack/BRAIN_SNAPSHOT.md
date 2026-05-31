@@ -18,7 +18,7 @@ Use this exact section as the primary writeback target after every night review 
 - PM roadmap: phase __ / this-week milestone __ / apps __ / outreach __ / funnel signal __ / next action __
 - Supplements: inactive until activation / morning-stack __ / isabgol __ / omega __ / magnesium __ / D3-if-due __ / issue __
 - Active preference confidence: low
-- Calibration window: v3.3 first 7 real-use days — start date unset / status not started
+- Calibration window: first 7 real-use days after v3.4 deployment / first real use — start date unset / status not started
 - Signals (today only, compact; overwritten daily): date/day __ / day-quality __ / sleep __ / meals __ / movement __ / mood-energy __ / weight __ / confidence confirmed/inferred/missing / risk-or-pattern __
 
 ## Signal confidence convention
@@ -49,7 +49,7 @@ Required writeback fields:
 - Sleep debt / sleep anchor if relevant
 - Active preference confidence if changed
 - Calibration window if changed
-- Optional: one compact `Signals:` line (today only; overwritten each day, never an append-only log). Life Signals tracking is active in v3.3; canonical rules in `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`, rolling history in `REBUILD_OS_BRAIN.md` Section 35.
+- Optional: one compact `Signals:` line (today only; overwritten each day, never an append-only log). Life Signals tracking is active; canonical rules in `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md`, rolling history in `REBUILD_OS_BRAIN.md` Section 35.
 
 ## Filled example after night review
 This is the target format. Do not turn the snapshot into a long journal.
@@ -71,6 +71,6 @@ Last updated: 2026-05-28 22:15 IST
 - PM roadmap: phase Launch / this-week milestone resume+tracker / apps 5 / outreach 1 / funnel signal too early / next action apply to practice tier.
 - Supplements: active Week 1 / morning-stack done / isabgol missed / omega done / magnesium planned / D3 not due / issue none.
 - Active preference confidence: low/building.
-- Calibration window: v3.3 first 7 real-use days — start date unset / baseline forming.
+- Calibration window: first 7 real-use days after v3.4 deployment / first real use — start date unset / baseline forming.
 - Signals: 2026-05-28 Thu / day-quality okay / sleep 2:30→10:00 q2 / meals B+L, dinner skipped / movement walk 15m / mood-energy low/2 / weight not due / confidence mostly confirmed, lunch quality light(inf) / risk: post-dinner drift
 ```
