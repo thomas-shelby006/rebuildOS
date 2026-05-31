@@ -7,29 +7,28 @@ Rebuild OS runs primarily inside a ChatGPT Project on ChatGPT Plus. GitHub/Kiro 
 
 Use the normal live pack in `chatgpt_live_pack/`. Do not upload `REBUILD_OS_ALL_IN_ONE.md` together with the normal live pack unless explicitly troubleshooting. The all-in-one file is fallback-only.
 
-- Mutable files to re-upload when they change: `BRAIN_SNAPSHOT.md`, `REBUILD_OS_BRAIN.md`, `core/41_ACTIVE_PREFERENCE_PROFILE.md`, and `core/40_PREFERENCE_FEEDBACK_LEDGER.md` if changed.
+- Mutable files to re-upload when they change: `BRAIN_SNAPSHOT.md`, `REBUILD_OS_BRAIN.md`, `core_41_ACTIVE_PREFERENCE_PROFILE.md`, and `core_40_PREFERENCE_FEEDBACK_LEDGER.md` if changed.
+- In the ChatGPT live pack, core files are uploaded with flattened names, e.g. `core_41_ACTIVE_PREFERENCE_PROFILE.md`. Source-path names like `core/41_ACTIVE_PREFERENCE_PROFILE.md` refer to the canonical repo source.
 - ChatGPT cannot rewrite uploaded files automatically; persistence is manual re-upload.
 - Tasks/reminders are nudges only, not the data store.
 
 ## Priority files
 If context is limited, prioritize:
 1. `BRAIN_SNAPSHOT.md`
-2. `core/00_PROJECT_INSTRUCTIONS.md`
-3. `core/41_ACTIVE_PREFERENCE_PROFILE.md`
+2. `core_00_PROJECT_INSTRUCTIONS.md`
+3. `core_41_ACTIVE_PREFERENCE_PROFILE.md`
 4. `REBUILD_OS_BRAIN.md`
-5. `core/21_FILE_LOADING_PRIORITY_GUIDE.md`
-6. `core/11_STATE_ROUTER_AND_MODE_SWITCH.md`
-7. `core/10_ADAPTIVE_DAY_ENGINE.md`
-8. `core/33_WORK_VISIBILITY_AND_COMMUNICATION_AVOIDANCE.md`
-9. `core/06_COMMITMENT_LEDGER.md`
-10. `core/18_COMMAND_MENU.md`
+5. `core_21_FILE_LOADING_PRIORITY_GUIDE.md`
+6. `CORE_OPERATING_MANUAL.md`
+7. `TEMPLATES_BUNDLE.md`
+8. `core_40_PREFERENCE_FEEDBACK_LEDGER.md`, only if preference feedback matters
 
 ## ChatGPT behavior
 - Load `BRAIN_SNAPSHOT.md` first for new sessions or low-context starts.
 - Do not dump the whole brain unless Sundar asks.
 - Natural-language input is valid; do not force templates.
 - During night review, update both `REBUILD_OS_BRAIN.md` and `BRAIN_SNAPSHOT.md`, then summarize changed sections only.
-- When preference consolidation changes files, export updated `core/41_ACTIVE_PREFERENCE_PROFILE.md` and, if changed, `core/40_PREFERENCE_FEEDBACK_LEDGER.md`.
+- When preference consolidation changes files, export updated `core_41_ACTIVE_PREFERENCE_PROFILE.md` and, if changed, `core_40_PREFERENCE_FEEDBACK_LEDGER.md`.
 - Use reminders/tasks only when Sundar explicitly asks or the item is serious/time-sensitive.
 - Latest explicit Sundar update wins.
 - English output only.
@@ -41,7 +40,7 @@ If context is limited, prioritize:
 - Win2 owns PM roadmap content; Rebuild OS owns accountability/execution tracking.
 - PM handoff is input, not override.
 - Canonical source files beat generated artifacts.
-- On conflict, record it and apply the hierarchy in `core/00_PROJECT_INSTRUCTIONS.md`.
+- On conflict, record it and apply the hierarchy in `core_00_PROJECT_INSTRUCTIONS.md` / `core/00_PROJECT_INSTRUCTIONS.md`.
 
 ## Default start
 Ask for a natural-language current-state update only if the snapshot is stale or insufficient. Otherwise route from the snapshot and current user input.
@@ -55,7 +54,7 @@ If the response is too long, say: `Use Rebuild OS minimum mode. Main need first.
 A rough day summary should be accepted in natural language, classify one missed item, update snapshot/brain fields, ask no more than two signal questions, and avoid report-card tone.
 
 ## First 7 real-use days
-The first 7 real-use days after v3.3 activation are calibration + feature freeze. Friction goes to System Notes unless a rule blocks today's action. Weekly review decides keep / simplify / remove.
+The first 7 real-use days after v3.4 deployment / first real use are calibration + feature freeze. Friction goes to System Notes unless a rule blocks today's action. Weekly review decides keep / simplify / remove.
 
 ## System improvement guardrail
 System improvement is not the daily system. If daily minimum actions are not done or scheduled, cap system work to one scoped task or defer it.
