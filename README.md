@@ -1,13 +1,13 @@
-# Rebuild OS v3.4 Coherence and Deployment Hardening
+# Rebuild OS v3.5 Personal Memory, Budget, Diary, and Events
 
-Rebuild OS is Sundar's self-coaching, accountability, planning, and life-management system.
+Rebuild OS is Sundar's self-coaching, accountability, planning, personal-memory, and life-management system.
 
-This package is intended for personal daily use inside ChatGPT Projects, with GitHub/Kiro as the source/archive/builder workspace.
+This package is intended for personal daily use inside ChatGPT Projects, with GitHub as the persistence/source layer. Kiro or any other implementation agent may help edit repos, but old Win1/Win2/Zero window labels are historical setup details and must not govern live behavior.
 
 ## Current status
 
-- Current merged base: v3.3 Life Signals.
-- This branch: v3.4 coherence/deployment hardening.
+- Current merged base: v3.4 Coherence and Deployment Hardening.
+- This branch: v3.5 Personal Memory, Budget, Diary, and Events.
 - See `VERSION.md` for current package status and source-of-truth rules.
 - See `CHANGELOG.md` for history.
 
@@ -26,8 +26,12 @@ It helps Sundar:
 - progress toward PM roles without making PM the whole system
 - run night and weekly reviews without punishment
 - track life signals as bounded week-to-week patterns
+- track budget/spending patterns from natural-language logs
+- keep a lightweight personal diary and recent-life memory
+- remember upcoming events and surface them before they matter
+- route memory updates to the correct GitHub repo/file
 - track the supplement routine only after explicit activation
-- preserve context through `BRAIN_SNAPSHOT.md` and `REBUILD_OS_BRAIN.md`
+- preserve context through `rebuild-os-live-state`, `BRAIN_SNAPSHOT.md`, and `REBUILD_OS_BRAIN.md`
 - adapt over time through preference feedback and the active preference profile
 
 ## ChatGPT Project setup
@@ -50,7 +54,13 @@ For a new ChatGPT Project:
 3. Paste `platforms/CHATGPT_PROJECT_INSTRUCTIONS.md` into Project Instructions.
 4. Run the startup smoke test from the upload guide.
 
-For Claude or other platforms, use the relevant file in `platforms/`.
+For any new chat with GitHub access, use:
+
+```text
+Start from live state
+```
+
+Expected behavior: load `rebuild-os-live-state/CURRENT_STATE.md`, check freshness/version, load only the needed domain memory file, then continue.
 
 ## Daily use commands
 
@@ -58,6 +68,7 @@ Use natural language if you forget commands.
 
 Core commands:
 
+- `Start from live state`
 - `Start session`
 - `Morning check-in`
 - `Post-scrum check`
@@ -68,21 +79,27 @@ Core commands:
 - `Night review`
 - `Weekly review`
 - `Export preferences`
+- `log spend: ...` or natural language spending updates
+- `diary: ...` or natural language life updates
+- `save upcoming event: ...` or natural language future-event updates
 - `Activate supplement routine` — optional; starts supplement tracking only when Sundar chooses
 
 ## First 7 real-use days
 
-The first 7 real-use days after v3.3 activation are calibration + feature freeze.
+The first 7 real-use days after v3.5 deployment are calibration + feature freeze.
 
-Supplement Routine ships with v3.4 but is dormant. It is not active, does not add first-week burden, and does not prompt/remind until Sundar explicitly says `Activate supplement routine`.
+Budget, diary, and future-event tracking are active for explicit user logs, but they must stay lightweight. Do not turn startup or Red-day check-ins into forms.
+
+Supplement Routine remains dormant. It is not active, does not add first-week burden, and does not prompt/remind until Sundar explicitly says `Activate supplement routine`.
 
 Allowed during first use:
 
-1. update brain/snapshot
-2. capture and export preferences
-3. schedule reminders
-4. fix true contradictions
-5. fix anything that blocks use today
+1. update live state / brain / snapshot
+2. capture budget, diary, and future-event updates when volunteered
+3. capture and export preferences
+4. schedule reminders for serious/time-sensitive items when approved
+5. fix true contradictions
+6. fix anything that blocks use today
 
 Everything else goes to System Notes and weekly review. Weekly review decides keep / simplify / remove.
 
@@ -90,20 +107,35 @@ Everything else goes to System Notes and weekly review. Weekly review decides ke
 
 - `VERSION.md` = current package status.
 - `CHANGELOG.md` = history.
-- `BRAIN_SNAPSHOT.md` = fast current-state starter.
-- `REBUILD_OS_BRAIN.md` = durable live brain.
+- `BRAIN_SNAPSHOT.md` = fast current-state starter for package-based setups.
+- `REBUILD_OS_BRAIN.md` = durable package brain.
 - `core/00_PROJECT_INSTRUCTIONS.md` = canonical behavior rules.
+- `core/21_FILE_LOADING_PRIORITY_GUIDE.md` = tells the AI what to load and ignore.
 - `core/41_ACTIVE_PREFERENCE_PROFILE.md` = active personalization.
 - `core/40_PREFERENCE_FEEDBACK_LEDGER.md` = raw preference feedback; load only when needed.
-- `core/21_FILE_LOADING_PRIORITY_GUIDE.md` = tells the AI what to load and ignore.
-- `REBUILD_OS_ALL_IN_ONE.md` = fallback-only single-file recovery. Do not upload with normal live pack by default.
-- `templates/` = command-specific workflows.
+- `core/46_PERSONAL_MEMORY_AND_REPO_ROUTER.md` = repo/file routing for memory writes.
+- `core/47_BUDGET_AND_SPENDING_TRACKER.md` = spending capture and budget patterns.
+- `core/48_DIARY_AND_LIFE_EVENTS_MEMORY.md` = personal diary/recent-life memory.
+- `core/49_FUTURE_EVENTS_AND_REMINDERS_MEMORY.md` = upcoming events and reminder memory.
 - `core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md` = active life-signal tracking + time-aware companion rules.
 - `core/45_SUPPLEMENT_ROUTINE_TRACKING.md` = dormant supplement routine tracking; active only after explicit activation.
+- `REBUILD_OS_ALL_IN_ONE.md` = fallback-only single-file recovery. Do not upload with normal live pack by default.
 - `chatgpt_live_pack/` = generated upload artifact for ChatGPT Project.
-- `platforms/` = Claude / ChatGPT / Canvas adapters.
+- `templates/` = command-specific workflows.
+- `platforms/` = ChatGPT / Claude / Canvas adapters.
 - `audit/` = setup and validation only.
 - `audit/history/` = old review artifacts; do not load during daily use.
+
+## GitHub memory repos
+
+Current memory architecture:
+
+- `thomas-shelby006/rebuildOS` — stable system rules, templates, generated bundles, deployment package.
+- `thomas-shelby006/rebuild-os-live-state` — mutable runtime state: current state, active commitments, budget current state, diary recent window, future events, repo registry, state log.
+- `thomas-shelby006/buying-things` — buying decisions, product research locks, purchase logs, reorder timing, category buying rules.
+- PM transition repo — PM roadmap source and PM-specific artifacts; Rebuild OS tracks execution but does not own roadmap strategy.
+
+Budget/diary/events start inside `rebuild-os-live-state`. They may later be split into separate private repos if they become large.
 
 ## Source-of-truth policy
 
@@ -121,13 +153,11 @@ If generated files disagree with canonical source files, source files win and ar
 ## Agent coordination policy
 
 - Sundar is the final approver.
-- ChatGPT is the orchestrator, reviewer, decision logic, and fallback patcher.
-- Kiro Win1 is the default Rebuild OS implementer/writer.
-- Kiro Win2 owns the PM transition plan repo and handoff.
-- Win1 gets the first implementation attempt for Rebuild OS changes.
-- If Win1 fails multiple clean write/exec attempts, ChatGPT may patch the PR branch directly while preserving Win1's latest validated plan/spec.
+- ChatGPT is the primary orchestrator, reviewer, decision logic, and direct GitHub patcher when explicitly instructed or when a previous implementation agent failed.
+- Implementation agents such as Kiro/Codex are optional helpers, not live-system authorities.
+- Old window labels such as Win1, Win2, and Zero are historical setup details and must not be used as current project routing.
 - PM repo owns PM roadmap content; Rebuild OS owns accountability/execution tracking.
-- On conflict, latest explicit Sundar instruction wins, then canonical source files, then generated artifacts.
+- On conflict, latest explicit Sundar instruction wins, then domain repo source of truth, then current live state, then canonical source files, then generated artifacts.
 
 ## Merge policy
 
