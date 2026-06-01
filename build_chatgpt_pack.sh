@@ -10,6 +10,7 @@ mkdir -p "$PACK"
 
 # --- Core operating manual bundle (high-use core modules, Life Signals first) ---
 CORE_FILES=(
+  core/46_GITHUB_MEMORY_ROUTER.md
   core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md
   core/45_SUPPLEMENT_ROUTINE_TRACKING.md
   core/10_ADAPTIVE_DAY_ENGINE.md
@@ -27,7 +28,7 @@ CORE_FILES=(
 )
 
 {
-  echo "# Core Operating Manual — Rebuild OS v3.4 Coherence and Deployment Hardening"
+  echo "# Core Operating Manual — Rebuild OS v3.5 GitHub Memory Router / Live-State Integration"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical core/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
@@ -64,7 +65,7 @@ TEMPLATE_FILES=(
 )
 
 {
-  echo "# Templates Bundle — Rebuild OS v3.4 Coherence and Deployment Hardening"
+  echo "# Templates Bundle — Rebuild OS v3.5 GitHub Memory Router / Live-State Integration"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical templates/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
