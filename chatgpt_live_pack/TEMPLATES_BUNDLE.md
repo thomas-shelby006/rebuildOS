@@ -1,4 +1,4 @@
-# Templates Bundle — Rebuild OS v3.4 Coherence and Deployment Hardening
+# Templates Bundle — Rebuild OS v3.5 GitHub Memory Router / Live-State Integration
 
 > GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical templates/ files.
 > Do not edit here; edit the source files and rebuild. Source files win on conflict.
