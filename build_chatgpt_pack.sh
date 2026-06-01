@@ -8,8 +8,12 @@ set -euo pipefail
 PACK="chatgpt_live_pack"
 mkdir -p "$PACK"
 
-# --- Core operating manual bundle (high-use core modules, Life Signals first) ---
+# --- Core operating manual bundle (high-use core modules, personal memory first) ---
 CORE_FILES=(
+  core/46_PERSONAL_MEMORY_AND_REPO_ROUTER.md
+  core/47_BUDGET_AND_SPENDING_TRACKER.md
+  core/48_DIARY_AND_LIFE_EVENTS_MEMORY.md
+  core/49_FUTURE_EVENTS_AND_REMINDERS_MEMORY.md
   core/44_LIFE_SIGNALS_AND_COMPANION_MODE.md
   core/45_SUPPLEMENT_ROUTINE_TRACKING.md
   core/10_ADAPTIVE_DAY_ENGINE.md
@@ -27,7 +31,7 @@ CORE_FILES=(
 )
 
 {
-  echo "# Core Operating Manual — Rebuild OS v3.4 Coherence and Deployment Hardening"
+  echo "# Core Operating Manual — Rebuild OS v3.5 Personal Memory, Budget, Diary, and Events"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical core/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
@@ -64,7 +68,7 @@ TEMPLATE_FILES=(
 )
 
 {
-  echo "# Templates Bundle — Rebuild OS v3.4 Coherence and Deployment Hardening"
+  echo "# Templates Bundle — Rebuild OS v3.5 Personal Memory, Budget, Diary, and Events"
   echo
   echo "> GENERATED ARTIFACT. Built by build_chatgpt_pack.sh from canonical templates/ files."
   echo "> Do not edit here; edit the source files and rebuild. Source files win on conflict."
