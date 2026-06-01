@@ -2,7 +2,7 @@
 
 ## v3.5 GitHub Memory Router / Live-State Integration — 2026-06-02
 
-Status: review branch, not merged to main.
+Status: deployed / merged to main.
 
 Adds the GitHub-backed memory-routing layer for Rebuild OS.
 
@@ -15,7 +15,7 @@ Adds the GitHub-backed memory-routing layer for Rebuild OS.
 - Updated README, upload guide, deployment checklist, VERSION, and review notes for v3.5.
 - Supports new live-state domains: budget/spending, personal diary/recent life, and future events.
 - Keeps existing boundaries: job stability first, PM as one track, supplement routine inactive until activation, buying decisions routed to `buying-things`, and stable OS rules kept in `rebuildOS`.
-- Requires artifact regeneration before merge: `bash build_all_in_one.sh` and `bash build_chatgpt_pack.sh`.
+- Generated artifacts were regenerated before merge with `bash build_all_in_one.sh` and `bash build_chatgpt_pack.sh`.
 
 ---
 

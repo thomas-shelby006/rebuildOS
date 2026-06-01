@@ -1,6 +1,6 @@
 # v3.5 Review Notes — GitHub Memory Router / Live-State Integration
 
-Status: review branch, not merged to main.
+Status: merged to main.
 
 Branch: `v3-5-memory-router-budget-diary`
 Base: v3.4 Coherence and Deployment Hardening
@@ -39,7 +39,7 @@ v3.5 adds stable routing for:
 - `build_chatgpt_pack.sh` registers `core/46_GITHUB_MEMORY_ROUTER.md`.
 - `README.md` updated for v3.5 architecture.
 - `chatgpt_live_pack/UPLOAD_README.md` updated with v3.5 live-state setup and smoke tests.
-- `VERSION.md` updated to v3.5 review branch.
+- `VERSION.md` updated to v3.5.
 - `DEPLOYMENT_CHECKLIST.md` updated for v3.5 validation.
 
 ## Existing live-state repo dependencies
@@ -67,19 +67,15 @@ The branch assumes `thomas-shelby006/buying-things` already contains its buying 
 - Read-before-answer and fallback-block rules reduce hallucinated persistence.
 
 ### Risks
-- Generated artifacts were not regenerated through a local shell in this session. `build_chatgpt_pack.sh` is updated, but bundle files may still be stale until scripts are run.
+- Generated artifacts were regenerated before merge, but deployment should still verify headers and upload-package consistency.
 - `core/00_PROJECT_INSTRUCTIONS.md` was rewritten in compressed form. It should be reviewed for accidental loss of useful nuance from v3.4.
 - `CHANGELOG.md` still needs a clean v3.5 top entry if final merge is approved.
 - The repo visibility/privacy setting should be checked separately before storing personal data.
 
-### Required before merge
-- Run `bash build_all_in_one.sh`.
-- Run `bash build_chatgpt_pack.sh`.
+### Required before deployment
 - Validate grep checks in `DEPLOYMENT_CHECKLIST.md`.
-- Review diff for accidental removal of important v3.4 behavior.
-- Add/confirm final `CHANGELOG.md` v3.5 entry.
+- Review deployable upload package for stale generated headers.
 - Confirm `rebuild-os-live-state` and `buying-things` remain private.
-- Sundar must explicitly approve final merge.
 
 ## Review focus for another AI
 

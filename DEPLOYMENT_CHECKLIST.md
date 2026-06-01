@@ -9,9 +9,9 @@ Official OpenAI file-upload limits are sufficient for this package: ChatGPT Plus
 
 If the UI shows a different limit, follow the UI and use the tight-limit priority order below.
 
-## Before upload / review
+## Before upload
 
-- [ ] Source edits are complete on the review branch.
+- [ ] Source edits are merged to `main`.
 - [ ] `core/46_GITHUB_MEMORY_ROUTER.md` exists.
 - [ ] Old Win1/Win2/Zero/window labels are not used as live routing rules.
 - [ ] `rebuild-os-live-state` repo exists and remains private.

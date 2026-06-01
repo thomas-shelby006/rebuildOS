@@ -6,9 +6,9 @@ This package is intended for personal daily use inside ChatGPT Projects, with Gi
 
 ## Current status
 
-- Current review branch: `v3-5-memory-router-budget-diary`.
+- Current deployed version: v3.5 GitHub Memory Router / Live-State Integration.
 - Previous deployed base: v3.4 Coherence and Deployment Hardening.
-- v3.5 goal: wire GitHub live-state memory, budget tracking, diary/recent-life memory, future events, and repo/domain routing into the main Rebuild OS package.
+- v3.5 adds GitHub live-state memory, budget tracking, diary/recent-life memory, future events, and repo/domain routing.
 - See `VERSION.md` for current package status and source-of-truth rules.
 - See `CHANGELOG.md` for history.
 

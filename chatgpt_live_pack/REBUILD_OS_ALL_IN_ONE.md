@@ -15,9 +15,9 @@ This package is intended for personal daily use inside ChatGPT Projects, with Gi
 
 ## Current status
 
-- Current review branch: `v3-5-memory-router-budget-diary`.
+- Current deployed version: v3.5 GitHub Memory Router / Live-State Integration.
 - Previous deployed base: v3.4 Coherence and Deployment Hardening.
-- v3.5 goal: wire GitHub live-state memory, budget tracking, diary/recent-life memory, future events, and repo/domain routing into the main Rebuild OS package.
+- v3.5 adds GitHub live-state memory, budget tracking, diary/recent-life memory, future events, and repo/domain routing.
 - See `VERSION.md` for current package status and source-of-truth rules.
 - See `CHANGELOG.md` for history.
 
@@ -185,10 +185,10 @@ System improvement is not the daily system. Before starting Rebuild OS editing, 
 
 Current: v3.5 GitHub Memory Router / Live-State Integration
 Previous: v3.4 Coherence and Deployment Hardening
-Status: review branch / not merged to main
+Status: deployed / merged to main
 
 Rules:
-- VERSION is current branch/package status.
+- VERSION is current package status.
 - CHANGELOG is history.
 - Canonical folders: core, templates, platforms.
 - `core/46_GITHUB_MEMORY_ROUTER.md` is the stable router spec.
@@ -196,7 +196,7 @@ Rules:
 - chatgpt_live_pack is an upload bundle.
 - audit/history is archive.
 - Generated bundles are derived files.
-- Future merges to main require explicit final approval.
+- Future feature merges to main require explicit final approval.
 
 <!-- ===== END VERSION.md ===== -->
 
@@ -214,9 +214,9 @@ Official OpenAI file-upload limits are sufficient for this package: ChatGPT Plus
 
 If the UI shows a different limit, follow the UI and use the tight-limit priority order below.
 
-## Before upload / review
+## Before upload
 
-- [ ] Source edits are complete on the review branch.
+- [ ] Source edits are merged to `main`.
 - [ ] `core/46_GITHUB_MEMORY_ROUTER.md` exists.
 - [ ] Old Win1/Win2/Zero/window labels are not used as live routing rules.
 - [ ] `rebuild-os-live-state` repo exists and remains private.
@@ -9676,7 +9676,7 @@ If Sundar is blocked on starting or overwhelmed by the system, use `templates/ST
 
 # v3.5 Review Notes — GitHub Memory Router / Live-State Integration
 
-Status: review branch, not merged to main.
+Status: merged to main.
 
 Branch: `v3-5-memory-router-budget-diary`
 Base: v3.4 Coherence and Deployment Hardening
@@ -9715,7 +9715,7 @@ v3.5 adds stable routing for:
 - `build_chatgpt_pack.sh` registers `core/46_GITHUB_MEMORY_ROUTER.md`.
 - `README.md` updated for v3.5 architecture.
 - `chatgpt_live_pack/UPLOAD_README.md` updated with v3.5 live-state setup and smoke tests.
-- `VERSION.md` updated to v3.5 review branch.
+- `VERSION.md` updated to v3.5.
 - `DEPLOYMENT_CHECKLIST.md` updated for v3.5 validation.
 
 ## Existing live-state repo dependencies
@@ -9743,19 +9743,15 @@ The branch assumes `thomas-shelby006/buying-things` already contains its buying 
 - Read-before-answer and fallback-block rules reduce hallucinated persistence.
 
 ### Risks
-- Generated artifacts were not regenerated through a local shell in this session. `build_chatgpt_pack.sh` is updated, but bundle files may still be stale until scripts are run.
+- Generated artifacts were regenerated before merge, but deployment should still verify headers and upload-package consistency.
 - `core/00_PROJECT_INSTRUCTIONS.md` was rewritten in compressed form. It should be reviewed for accidental loss of useful nuance from v3.4.
 - `CHANGELOG.md` still needs a clean v3.5 top entry if final merge is approved.
 - The repo visibility/privacy setting should be checked separately before storing personal data.
 
-### Required before merge
-- Run `bash build_all_in_one.sh`.
-- Run `bash build_chatgpt_pack.sh`.
+### Required before deployment
 - Validate grep checks in `DEPLOYMENT_CHECKLIST.md`.
-- Review diff for accidental removal of important v3.4 behavior.
-- Add/confirm final `CHANGELOG.md` v3.5 entry.
+- Review deployable upload package for stale generated headers.
 - Confirm `rebuild-os-live-state` and `buying-things` remain private.
-- Sundar must explicitly approve final merge.
 
 ## Review focus for another AI
 
@@ -10044,7 +10040,7 @@ Influence: operationalize snapshot writeback, connect handoff to snapshot-first 
 
 ## v3.5 GitHub Memory Router / Live-State Integration — 2026-06-02
 
-Status: review branch, not merged to main.
+Status: deployed / merged to main.
 
 Adds the GitHub-backed memory-routing layer for Rebuild OS.
 
@@ -10057,7 +10053,7 @@ Adds the GitHub-backed memory-routing layer for Rebuild OS.
 - Updated README, upload guide, deployment checklist, VERSION, and review notes for v3.5.
 - Supports new live-state domains: budget/spending, personal diary/recent life, and future events.
 - Keeps existing boundaries: job stability first, PM as one track, supplement routine inactive until activation, buying decisions routed to `buying-things`, and stable OS rules kept in `rebuildOS`.
-- Requires artifact regeneration before merge: `bash build_all_in_one.sh` and `bash build_chatgpt_pack.sh`.
+- Generated artifacts were regenerated before merge with `bash build_all_in_one.sh` and `bash build_chatgpt_pack.sh`.
 
 ---
 

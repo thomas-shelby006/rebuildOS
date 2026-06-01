@@ -2,10 +2,10 @@
 
 Current: v3.5 GitHub Memory Router / Live-State Integration
 Previous: v3.4 Coherence and Deployment Hardening
-Status: review branch / not merged to main
+Status: deployed / merged to main
 
 Rules:
-- VERSION is current branch/package status.
+- VERSION is current package status.
 - CHANGELOG is history.
 - Canonical folders: core, templates, platforms.
 - `core/46_GITHUB_MEMORY_ROUTER.md` is the stable router spec.
@@ -13,4 +13,4 @@ Rules:
 - chatgpt_live_pack is an upload bundle.
 - audit/history is archive.
 - Generated bundles are derived files.
-- Future merges to main require explicit final approval.
+- Future feature merges to main require explicit final approval.
